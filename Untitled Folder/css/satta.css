@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFCC99;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+  margin: 10px;
+}
+
+.logo {
+  text-align: center;
+  font-size: 3em;
+  padding: 0.4em;
+  border: 3px solid #ff0016;
+  border-radius: 15px;
+}
+
+.sattalist {
+  margin-top: 1em;
+  border: 3px solid #FF00A2;
+  border-radius: 15px;
+}
+.sattalist h2 {
+  text-align: center;
+  background-color: #FF00A2;
+  padding: 0.3em;
+  border: 3px solid white;
+  color: white;
+  border-radius: 15px;
+  font-style: italic;
+}
+.sattalist .admin .controls {
+  text-align: center;
+}
+.sattalist .admin .controls button {
+  border: none;
+  font-weight: normal;
+  padding: 5px 10px;
+  font-size: 1em;
+  box-shadow: 1px 1px 2px black;
+}
+.sattalist .admin .controls button:hover {
+  font-weight: bold;
+}
+.sattalist .admin .controls button:nth-of-type(1) {
+  background-color: #ff0016;
+}
+.sattalist .admin .controls button:nth-of-type(2) {
+  background-color: green;
+}
+.sattalist .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #FF00A2;
+}
+.sattalist .item button {
+  background-color: #00199F;
+  color: white;
+  padding: 2px 5px;
+  font-size: 14px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.sattalist .item h3 {
+  font-style: italic;
+  color: #00199F;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.sattalist .item p:nth-of-type(1) {
+  color: #6D1137;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+.sattalist .item p:nth-of-type(2) {
+  font-weight: 600;
+  text-align: center;
+  font-style: italic;
+}
+.sattalist .item input {
+  background-color: #FFCC99;
+  border: 1px solid transparent;
+  font-size: 1.3em;
+  text-align: center;
+  display: inline;
+  font-weight: bold;
+}
+.sattalist .item .info h3 input {
+  border: 1px solid white;
+}
+.sattalist .item .info .time {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 0.5em;
+}
+.sattalist .item .info .time div {
+  border: 1px solid white;
+  padding: 1px;
+}
+.sattalist .item .info .time input {
+  font-weight: normal;
+  font-size: 1.1em;
+  box-shadow: 2px 2px 4px #FF9A34;
+}
+.sattalist .item .info .time label {
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #6D1137;
+}
+.sattalist .item .number {
+  display: flex;
+  margin-top: 0.5em;
+  justify-content: center;
+  gap: 1px;
+}
+.sattalist .item .number div {
+  border: 2px solid gold;
+  display: flex;
+  border: 1px solid white;
+  align-items: center;
+  padding: 0;
+}
+.sattalist .item .number div p {
+  padding: 0;
+}
+.sattalist .item .number input {
+  color: #6D1137;
+  font-size: 1.4em;
+  width: 4ch;
+}
+.sattalist .item .number .ch1 {
+  width: 2ch;
+}
+
+.nb {
+  border-right: none;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 15px;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  background-color: #00199F;
+  cursor: pointer;
+}
+
+.panel h1 {
+  text-align: center;
+  background-color: #FF00A2;
+  color: white;
+  padding: 0.3em;
+  border-radius: 15px;
+  border: 3px solid white;
+}
+.panel table {
+  width: 100%;
+  text-align: center;
+}
+.panel table, .panel th, .panel td {
+  border: 1px solid rgba(0, 0, 0, 0.332);
+  border-collapse: collapse;
+  padding: 5px;
+}/*# sourceMappingURL=satta.css.map */

@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap");
+.container {
+  padding: 0 4em;
+}
+
+.b {
+  border: 1px solid black;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+  background-color: #f0f0f0;
+  text-decoration: none;
+  list-style: none;
+}
+body a {
+  text-decoration: none;
+}
+body li {
+  list-style: none;
+}
+body h1, body h2, body h3, body h4, body h5, body h6, body p {
+  margin: 0;
+}
+
+.header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header nav h1 {
+  color: #124265;
+}
+.header nav a {
+  font-size: 1.1em;
+  color: #4C9DD7;
+}
+
+.hero {
+  margin: 2.5em auto;
+  background-image: url("/images/hero-bg.jpg");
+  background-attachment: fixed;
+  position: relative;
+}
+.hero ::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.889);
+  position: absolute;
+  top: 0;
+}
+.hero .left {
+  display: block;
+  text-align: center;
+}
+.hero .left h2, .hero .left h6, .hero .left button {
+  margin-top: 1em;
+}
+.hero .left h2 {
+  font-weight: bold;
+  font-size: 4.5vw;
+  color: #124265;
+}
+.hero .left h6 {
+  font-size: 1.5em;
+  color: #626262;
+}
+.hero .left button {
+  padding: 0.6em 0.9em;
+  background-color: #4C9DD7;
+  border: none;
+  color: white;
+  border-radius: 0.1em;
+}
+.hero .left button:hover {
+  background-color: #58aae4;
+  cursor: pointer;
+}
+.hero .left .readmore {
+  padding: 0.6em 0.9em;
+  background-color: #4C9DD7;
+  border: none;
+  color: white;
+  border-radius: 0.1em;
+  font-size: 1em;
+}
+.hero .hero-form {
+  padding: 2em;
+  background-color: white;
+  min-width: 300px;
+}
+.hero .hero-form select option {
+  text-transform: capitalize;
+  color: #626262;
+}
+.hero .hero-form .error {
+  color: red;
+  font-weight: 400;
+  font-size: 0.85em;
+}
+.hero .hero-form .mb {
+  margin-bottom: 1em;
+}
+.hero .hero-form .heading {
+  text-align: center;
+  margin: 0.6em auto;
+  font-size: 1.3em;
+}
+.hero .hero-form label, .hero .hero-form p {
+  display: block;
+  font-size: 0.9em;
+  color: #626262;
+}
+.hero .hero-form input, .hero .hero-form select, .hero .hero-form input[type=date] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6em;
+  font-size: 1em;
+  border: 1px solid #cbcbcb;
+  background-color: white;
+  color: #626262;
+  border-radius: 0.1em;
+}
+.hero .hero-form input:focus, .hero .hero-form select:focus, .hero .hero-form select:visited {
+  border: 1px solid #58aae4;
+  outline: none;
+}
+.hero .hero-form .otplink {
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 1em;
+}
+.hero .hero-form .otplink a {
+  color: #626262;
+  font-weight: 500;
+}
+.hero .hero-form .otplink a:hover {
+  color: #58aae4;
+}
+.hero .hero-form .timer {
+  margin-bottom: 1em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.hero .hero-form .timer a {
+  color: #4C9DD7;
+}
+.hero .hero-form .submit {
+  text-align: center;
+  width: unset;
+}
+.hero .hero-form .submit input {
+  width: unset;
+  padding: 0.6em 0.9em;
+  background-color: #4C9DD7;
+  border: none;
+  color: white;
+  border-radius: 0.1em;
+}
+.hero .hero-form .submit input:hover {
+  background-color: #58aae4;
+}
+.hero .hero-form .radio {
+  display: flex;
+  -moz-column-gap: 1em;
+       column-gap: 1em;
+  align-items: center;
+  margin-bottom: 0;
+}
+.hero .hero-form .radio div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.hero .hero-form .radio input {
+  width: unset;
+}/*# sourceMappingURL=main.css.map */

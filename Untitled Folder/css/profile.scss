@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap'); 
+
+$container-padding: 4em;
+
+$light-blue: #4C9DD7;
+$light-blue-hover: #58aae4;
+$heading: #124265;
+$light-blue-bg: #F8FBFE;
+$grey: #626262;
+$light-grey: #cbcbcb;
+$em1padding: 1em;
+
+body {
+    margin: 0;
+    font-family: 'Poppins';
+    // background-color: rgba($color: #f0f0f0, $alpha: 1.0);
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+    a {
+        text-decoration: none;
+      }
+    
+      li {
+        list-style: none;
+      }
+
+      h1,h2,h3,h4,h5,h6,p {
+        margin: 0;
+      } 
+}
+
+.profile {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .head {
+        background-color: $light-blue-hover;
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+    
+        a {
+            text-align: center;
+            flex-basis: 100%;
+            padding-top: .7em;
+            padding-bottom: .7em;           
+        }
+
+        a:hover {
+
+            i, p {
+                color: white
+            }
+        }
+    
+        .active i, .active p {
+            color: white;
+        }
+    
+        i{
+            font-size: 1.3em;
+        }
+    
+        p, i {
+            color: $heading;
+        }
+    }
+
+    .foot {
+        background-color: aqua;
+        flex-grow: 1;
+        // background-image: url("/images/download.jpeg");
+        background-repeat: no-repeat; 
+        background-size:contain;
+        background-position: center center;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        position: relative;
+
+        img {
+
+            object-fit: contain;
+            backdrop-filter: blur(25px);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+
+        }
+
+        .btnlayer {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            // grid-template-rows: 50px 50px 50px;
+            // grid-template-columns: 1fr 2fr 3fr;
+            justify-content: space-between;
+            border: 4px solid;
+            width: 100%; 
+            
+            p {
+                color: white;
+            }
+        }
+        
+        .lowerband {
+            background-color: #124265;
+            display: flex;
+            // color: red;
+            justify-content: space-around;
+            text-align: center;
+            // padding-top: .5em;
+            // padding-bottom: .5em;
+
+            a {
+                color: wheat;
+                
+            }
+        }
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(255, 0, 0, 0.217);
+            align-items:flex-end;
+            padding-right: $em1padding;
+            
+        }
+
+        .center {
+            background-color: rgba(0, 128, 0, 0.154);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bottom {
+            background-color: rgba(0, 0, 255, 0.195);
+
+            .row3 {
+                display: flex;
+                justify-content: space-between;
+
+                .info {
+                    display: flex;
+                    column-gap: $em1padding;
+                    padding-left: $em1padding;
+                    // padding-right: 1em;
+                }
+
+                .location {
+                    padding-right: $em1padding;
+                }
+            }
+
+            .row4 {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+
+        
+
+        
+        
+    }
+}
+
+
+
