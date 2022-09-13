@@ -16,8 +16,8 @@ class Home extends BaseController
     {
         $sattamodel = new SattaModel();
         $data['list'] = $sattamodel->findAll();
-        echo '<pre>';
-        print_r($data);
+        // echo '<pre>';
+        // print_r($data);
 
         return view('home', $data);
     }
@@ -37,10 +37,10 @@ class Home extends BaseController
 
         $rules = [
             'name' => 'required',
-            // 'first_three_digit' => '',
-            // 'first_one_digit' => '',
-            // 'last_one_digit'    => '',
-            // 'last_three_digit'    => '',
+            'first_three_digit' => 'required|integer',
+            'first_one_digit' => 'required|integer',
+            'last_one_digit'    => 'required|integer',
+            'last_three_digit'    => 'required|integer',
             'start_time'    => 'required',
             'end_time'    => 'required',
 
@@ -70,7 +70,7 @@ class Home extends BaseController
         //saving to db
         $satta = new SattaModel();
 
-        $sattanumber = $this->request->getVar('end_time') .  $this->request->getVar('end_time') . $this->request->getVar('end_time') . $this->request->getVar('end_time');
+        $sattanumber = $this->request->getVar('first_three_digit') .  $this->request->getVar('first_one_digit') . $this->request->getVar('last_one_digit') . $this->request->getVar('last_three_digit');
 
         $sattaData = [
             'name' => $this->request->getVar('name'),

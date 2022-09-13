@@ -58,14 +58,14 @@ $session = \Config\Services::session();
 
                     <div class="number">
                         <div>
-                            <input type="text" name="first_three_digit" maxlength="3" value="***">
+                            <input type="text" name="first_three_digit" maxlength="3" value="<?= set_value('first_three_digit') ?>" placeholder="***">
                             <p>-</p>
-                            <input name="first_one_digit" class="ch1" type="text" maxlength="1" value="*">
+                            <input name="first_one_digit" class="ch1" type="text" maxlength="1" value="<?= set_value('first_one_digit') ?>" placeholder="*">
                         </div>
                         <div>
-                            <input name="last_one_digit" class="ch1" type="text" maxlength="1" value="*">
+                            <input name="last_one_digit" class="ch1" type="text" maxlength="1" value="<?= set_value('last_one_digit') ?>" placeholder="*">
                             <p>-</p>
-                            <input name="last_three_digit" type="text" maxlength="3" value="***">
+                            <input name="last_three_digit" type="text" maxlength="3" value="<?= set_value('last_three_digit') ?>" placeholder="***">
                         </div>
                     </div>
 

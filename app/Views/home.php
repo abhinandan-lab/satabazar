@@ -11,34 +11,19 @@
 </head>
 <body>
 
+
+    <?php 
+
+    // $date = '19:24'; 
+    // echo date('h:i A', strtotime($date));
+
+    ?>
+
     <div class="container">
         <h1 class="logo">sata bazar</h1>
 
         <div class="sattalist">
             <h2>LIVE RESULT</h2>
-
-            <?php
-
-
-
-            ?>
-
-  
-          
-
-            <div class="item">
-                <a href="#">Jodi</a>
-                <button type="button">Jodi</button>
-                <div class="info">
-                    <h3>Madhuri night</h3>
-                    <p>143-44-567</p>
-                    <p>11:15 pm &nbsp; &nbsp; 12:12 am</p>
-                </div>
-                <button type="button">Panel</button>
-                <a href="#">Panel</a>
-
-            </div>
-
 
             <?php foreach($list as $row) { ?>
 
@@ -46,9 +31,9 @@
                 <a href="#">Jodi</a>
                 <button type="button">Jodi</button>
                 <div class="info">
-                    <h3>Madhuri night <?=  $row['name'] ?></h3>
-                    <p>143-44-567 <?=  $row['satta_number'] ?></p>
-                    <p>11:15 pm &nbsp; &nbsp; 12:12 am</p>
+                    <h3><?=  $row['name'] ?></h3>
+                    <p><?=substr($row['satta_number'], 0, 3)?>-<?=substr($row['satta_number'], 3, 2)?>-<?=substr($row['satta_number'], 5, 3)?> </p>
+                    <p><?= date('h:i A', strtotime($row['start_time'])) ?> &nbsp; &nbsp; <?= date('h:i A', strtotime($row['end_time'])) ?></p>
                 </div>
                 <button type="button">Panel</button>
                 <a href="#">Panel</a>
