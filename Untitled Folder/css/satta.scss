@@ -11,7 +11,7 @@ $red-color: #ff0016;
 $purple-color: #6D1137;
 
 
-* {margin: 0; padding: 0; box-sizing: border-box;}
+* {margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; list-style: none;}
 
 body {
     background-color: $cream-color;
@@ -127,6 +127,8 @@ body {
             // padding: 2px;
             font-weight: bold;
 
+
+
         }
 
         .info {
@@ -147,19 +149,23 @@ body {
 
                 div {
                     border: 1px solid white;
-                    padding: 1px;
+                    padding: 2px;
                 }
 
                 input {
                     font-weight: normal;
-                    font-size: 1.1em;
+                    font-size: 1.4em;
                     box-shadow: 2px 2px 4px #FF9A34;
+                    font-weight: bold;
+
+
                 }
 
                 label {
-                    font-weight: bold;
-                    font-size: 1.4em;
-                    color: $purple-color;
+                    // font-weight: bold;
+                    // font-size: 1.4em;
+                    // color: $purple-color;
+                    text-transform: capitalize;
 
                 }
             }
@@ -197,6 +203,108 @@ body {
                 width: 2ch;
             }
         }
+    }
+
+    .action {
+        // border: 1px solid;
+        // display: block;
+        padding: 1em;
+
+        a {
+            background-color: $pink-color;
+            color: white;
+            padding: 5px 10px;
+            // margin-top: 15px;
+            border: 1px solid;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+        }
+
+        a:hover {
+            border: 2px solid white;
+            box-shadow: 2px 2px 4px $purple-color;
+        }
+    }
+
+    .create {
+        display: block;
+        text-align: center;
+
+
+        .errors {
+            background-color: $red-color;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+            p, li {
+                color: white;
+                font-size: 1em;
+                font-weight: normal;
+                font-style: normal;
+                text-transform: capitalize;
+            }
+        }
+
+
+        .time {
+            // border: 1px solid;
+            display: flex;
+            column-gap: 1em;
+            max-width: 600px;
+            margin: auto;
+
+            input {
+                font-size: 1.3em;
+                // font-weight: bold;
+                // border: 1px solid;
+            }
+        }
+
+        .controls {
+            // border: 1px solid;
+            margin-top: 15px;
+
+            a {
+                // background-color: red;
+                background-color: $red-color;
+                color: white;
+                padding: 5px 10px;
+                // margin-top: 15px;
+                border: 1px solid;
+                text-decoration: none;
+                border: 2px solid transparent;
+                font-weight: bold;
+                font-size: 1em;
+
+            }
+
+            a:hover {
+                border: 2px solid white;
+            }
+
+            input {
+                // background-color: red;
+                background-color: $pink-color;
+                color: white;
+                padding: 5px 10px;
+                // margin-top: 15px;
+                border: 1px solid;
+                text-decoration: none;
+                border: 2px solid transparent;
+                font-weight: bold;
+                font-size: 1em;
+            }
+
+            input:hover {
+                border: 2px solid white;
+                box-shadow: 2px 2px 4px $purple-color;
+            }
+        }
+
     }
 }
 

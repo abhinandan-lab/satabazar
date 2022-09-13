@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +7,8 @@
     <title>Document</title>
 
 
-    <link rel="stylesheet" href="/css/satta.css">
+    <link rel="stylesheet" href="<?= base_url();?>/public/asset/css/satta.css">
 </head>
-
 <body>
 
     <div class="container">
@@ -21,7 +19,7 @@
 
 
             <div class="action">
-                <button>Create sata</button>
+                <a href="<?= base_url();?>/create">Create satta</a>
             </div>
             <div class="item admin">
                 <button type="button">Jodi</button>
@@ -181,5 +179,4 @@
 
 
 </body>
-
 </html>
