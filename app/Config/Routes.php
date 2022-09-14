@@ -36,10 +36,19 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('admin', 'Home::admin');
 
-$routes->get('create', 'Home::adminCreate');
-$routes->post('create', 'Home::adminCreate');
+
+// admin routes
+$routes->get('adminlogin', 'Home::adminLogin');
+$routes->post('adminlogin', 'Home::adminLogin');
+
+
+
+$routes->group('', ['filter'=> 'isAdminLoggedin'], function($routes){
+    $routes->get('admin', 'Home::admin');
+    $routes->get('create', 'Home::adminCreate');
+    $routes->post('create', 'Home::adminCreate');   
+});
 
 
 /*
