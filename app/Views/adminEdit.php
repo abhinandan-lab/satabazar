@@ -14,7 +14,7 @@
 <body>
 
 
-<?php
+    <?php
 
 $validation = \Config\Services::validation();
 $session = \Config\Services::session();
@@ -33,7 +33,7 @@ $session = \Config\Services::session();
                 }
             
             ?>
-            <h2>Create New List</h2>
+            <h2>Edit List</h2>
 
 
             <div class="action">
@@ -45,21 +45,25 @@ $session = \Config\Services::session();
 
                     <?= $validation->listErrors() ?>
 
+                    <?= form_open('satta-edit'); ?>
+                    <h3><input type="text" name="name" value="<?= $row['name'] ?>" placeholder="Enter name"></h3>
 
-                    <?= form_open(); ?>
-                    <h3><input type="text" name="name" value="<?= set_value('name') ?>" placeholder="Enter name"></h3>
-
+                    <input type="hidden" name="id" value=" <?= $row['id'] ?>">
 
                     <div class="number">
                         <div>
-                            <input type="text" name="first_three_digit" maxlength="3" value="<?= set_value('first_three_digit') ?>" placeholder="***">
+                            <input type="text" name="first_three_digit" maxlength="3" value="<?=substr($row['satta_number'], 0, 3)?>"
+                                placeholder="***">
                             <p>-</p>
-                            <input name="first_one_digit" class="ch1" type="text" maxlength="1" value="<?= set_value('first_one_digit') ?>" placeholder="*">
+                            <input name="first_one_digit" class="ch1" type="text" maxlength="1"
+                                value="<?=substr($row['satta_number'], 3, 1)?>" placeholder="*">
                         </div>
                         <div>
-                            <input name="last_one_digit" class="ch1" type="text" maxlength="1" value="<?= set_value('last_one_digit') ?>" placeholder="*">
+                            <input name="last_one_digit" class="ch1" type="text" maxlength="1"
+                                value="<?=substr($row['satta_number'], 4, 1)?>" placeholder="*">
                             <p>-</p>
-                            <input name="last_three_digit" type="text" maxlength="3" value="<?= set_value('last_three_digit') ?>" placeholder="***">
+                            <input name="last_three_digit" type="text" maxlength="3"
+                                value="<?=substr($row['satta_number'], 5, 3)?>" placeholder="***">
                         </div>
                     </div>
 
@@ -68,19 +72,19 @@ $session = \Config\Services::session();
 
                         <div class="start">
                             <label for="start_time">start time</label>
-                            <input type="time" value="<?= set_value('start_time') ?>" name="start_time" id="start_time">
+                            <input type="time" value="<?= $row['start_time'] ?>" name="start_time" id="start_time">
                         </div>
 
                         <div class="endt">
                             <label for="end_time">end time </label>
-                            <input type="time" value="<?= set_value('end_time') ?>" name="end_time" id="end_time">
+                            <input type="time" value="<?= $row['end_time'] ?>" name="end_time" id="end_time">
                         </div>
                     </div>
                     <div class="controls">
 
                         <a href="<?= base_url(); ?>/admin">Go Back</a>
 
-                        <input type="submit" value="Create">
+                        <input type="submit" value="Save Update">
 
                     </div>
                     <?= form_close(); ?>

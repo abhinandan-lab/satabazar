@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
 
     <link rel="stylesheet" href="<?= base_url();?>/public/asset/css/satta.css">
 </head>
+
 <body>
 
     <div class="container">
@@ -17,166 +19,49 @@
         <div class="sattalist">
             <h2>LIVE RESULT</h2>
 
+            <?php
+
+            if( isset($_SESSION['success'])) {
+                echo '<p>'. $_SESSION['success'] .'</p>';
+            }
+
+            ?>
+
 
             <div class="action">
                 <a href="<?= base_url();?>/create">Create satta</a>
             </div>
-            <div class="item admin">
-                <button type="button">Jodi</button>
-                <div class="info">
-                    <h3><input type="text" value="Madhuri satta"></h3>
-                    <div class="number">
-                        <div>
-                            <input type="text" maxlength="3" value="143">
-                            <p>-</p>
-                            <input class="ch1" type="text" maxlength="1" value="4">
-                        </div>
-                        <div>
-                            <input class="ch1" type="text" maxlength="1" value="4">
-                            <p>-</p>
-                            <input type="text" maxlength="3" value="143">
-                        </div>
-                    </div>
 
-                    <div class="time">
-
-
-                        <div class="start">
-                            <input type="time" name="start-time" id="start-time">
-                            <label for="start-time">11:15 pm</label>
-                        </div>
-
-                        <div class="endt">
-                            <input type="time" name="end-time" id="end-time">
-                            <label for="end-time">12:12 am</label>
-                        </div>
-                    </div>
-
-                    <div class="controls">
-
-                        <button>Delete</button>
-                        <button>Save</button>
-                    </div>
-                </div>
-                <button type="button">Panel</button>
-            </div>
+            <?php foreach($list as $row) {  ?>
 
             <div class="item admin">
-                <button type="button">Jodi</button>
+                <a href="jodi/ <?= $row['id'] ?>" targer="_blank">Jodi</a>
                 <div class="info">
-                    <h3><input type="text" value="Madhuri satta"></h3>
-                    <div class="number">
-                        <div>
-                            <input type="text" maxlength="3" value="143">
-                            <p>-</p>
-                            <input class="ch1" type="text" maxlength="1" value="4">
-                        </div>
-                        <div>
-                            <input class="ch1" type="text" maxlength="1" value="4">
-                            <p>-</p>
-                            <input type="text" maxlength="3" value="143">
-                        </div>
-                    </div>
 
-                    <div class="time">
-
-
-                        <div class="start">
-                            <input type="time" name="start-time" id="start-time">
-                            <label for="start-time">11:15 pm</label>
-                        </div>
-
-                        <div class="endt">
-                            <input type="time" name="end-time" id="end-time">
-                            <label for="end-time">12:12 am</label>
-                        </div>
-                    </div>
+                    <h3><?=  $row['name'] ?></h3>
+                    <p><?=substr($row['satta_number'], 0, 3)?>-<?=substr($row['satta_number'], 3, 2)?>-<?=substr($row['satta_number'], 5, 3)?>
+                    </p>
+                    <p><?= date('h:i A', strtotime($row['start_time'])) ?> &nbsp; &nbsp;
+                        <?= date('h:i A', strtotime($row['end_time'])) ?></p>
 
                     <div class="controls">
-
-                        <button>Delete</button>
-                        <button>Save</button>
+                        <a href="satta-delete/<?= $row['id'] ?>">Delete</a>
+                        <a href="satta-edit/<?= $row['id'] ?>">Edit</a>
                     </div>
                 </div>
-                <button type="button">Panel</button>
+                <a href="panel/<?= $row['id'] ?>" targer="_blank">Panel</a>
             </div>
 
-            <div class="item admin">
-                <button type="button">Jodi</button>
-                <div class="info">
-                    <h3><input type="text" value="Madhuri satta"></h3>
-                    <div class="number">
-                        <div>
-                            <input type="text" maxlength="3" value="143">
-                            <p>-</p>
-                            <input class="ch1" type="text" maxlength="1" value="4">
-                        </div>
-                        <div>
-                            <input class="ch1" type="text" maxlength="1" value="4">
-                            <p>-</p>
-                            <input type="text" maxlength="3" value="143">
-                        </div>
-                    </div>
-
-                    <div class="time">
+            <?php } ?>
 
 
-                        <div class="start">
-                            <input type="time" name="start-time" id="start-time">
-                            <label for="start-time">11:15 pm</label>
-                        </div>
-
-                        <div class="endt">
-                            <input type="time" name="end-time" id="end-time">
-                            <label for="end-time">12:12 am</label>
-                        </div>
-                    </div>
-
-                    <div class="controls">
-
-                        <button>Delete</button>
-                        <button>Save</button>
-                    </div>
-                </div>
-                <button type="button">Panel</button>
-            </div>
 
 
         </div>
 
 
 
-        <script>
-            var times = {}, re = /^\d+(?=:)/;
-
-            for (var i = 13, n = 1; i < 24; i++, n++) {
-                times[i] = n < 10 ? "0" + n : n
-            }
-
-            document.getElementById("end-time")
-                .onchange = function () {
-                    var time = this
-                        , value = time.value
-                        , match = value.match(re)[0];
-                    this.nextElementSibling.innerHTML =
-                        (match && match >= 13 ? value.replace(re, times[match]) : value)
-                        + (time.valueAsDate.getTime() < 43200000 ? " AM" : " PM")
-                }
-
-
-            document.getElementById("start-time")
-                .onchange = function () {
-                    var time = this
-                        , value = time.value
-                        , match = value.match(re)[0];
-                    this.nextElementSibling.innerHTML =
-                        (match && match >= 13 ? value.replace(re, times[match]) : value)
-                        + (time.valueAsDate.getTime() < 43200000 ? " AM" : " PM")
-                }
-        </script>
-
-
-
 
 </body>
+
 </html>

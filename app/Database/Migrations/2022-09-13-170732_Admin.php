@@ -30,6 +30,8 @@ class Admin extends Migration
             'verify_otp' => [
                 'type' => 'VARCHAR',
                 'constraint' => 1024,
+                'null' => true,
+
             ],
 
             'created_at datetime default current_timestamp',

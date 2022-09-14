@@ -23,10 +23,30 @@ body {
   border-radius: 15px;
 }
 
+.nb {
+  border-right: none;
+}
+
+button, a {
+  padding: 10px 15px;
+  margin: 15px;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  background-color: #00199F;
+  cursor: pointer;
+}
+
 .sattalist {
   margin-top: 1em;
   border: 3px solid #FF00A2;
   border-radius: 15px;
+}
+.sattalist .item.admin a {
+  padding: 4px 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.9em;
 }
 .sattalist h2 {
   text-align: center;
@@ -54,6 +74,7 @@ body {
   color: #6D1137;
   font-family: "Times New Roman", Times, serif;
   font-size: 1.1em;
+  background-color: none;
 }
 .sattalist .login .link a:hover {
   color: #00199F;
@@ -88,23 +109,42 @@ body {
   border: 2px solid #00199F;
   color: #00199F;
 }
+.sattalist .login .errors {
+  background-color: #ff0016;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 5px;
+}
+.sattalist .login .errors p, .sattalist .login .errors li {
+  color: white;
+  font-size: 0.9sem;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: capitalize;
+}
+.sattalist .admin a {
+  padding: 3px 8px;
+  border-radius: 10px;
+}
 .sattalist .admin .controls {
   text-align: center;
 }
-.sattalist .admin .controls button {
+.sattalist .admin .controls a {
   border: none;
   font-weight: normal;
   padding: 5px 10px;
   font-size: 1em;
   box-shadow: 1px 1px 2px black;
+  margin-top: 10px;
 }
-.sattalist .admin .controls button:hover {
+.sattalist .admin .controls a:hover {
   font-weight: bold;
 }
-.sattalist .admin .controls button:nth-of-type(1) {
+.sattalist .admin .controls a:nth-of-type(1) {
   background-color: #ff0016;
 }
-.sattalist .admin .controls button:nth-of-type(2) {
+.sattalist .admin .controls a:nth-of-type(2) {
   background-color: green;
 }
 .sattalist .item {
@@ -123,7 +163,6 @@ body {
   font-weight: bold;
 }
 .sattalist .item h3 {
-  font-style: italic;
   color: #00199F;
   font-weight: bold;
   font-size: 1.5em;
@@ -139,8 +178,9 @@ body {
 .sattalist .item p:nth-of-type(2) {
   font-weight: 600;
   text-align: center;
-  font-style: italic;
   text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 0.96em;
 }
 .sattalist .item input {
   background-color: #FFCC99;
@@ -270,20 +310,6 @@ body {
 .sattalist .create .controls input:hover {
   border: 2px solid white;
   box-shadow: 2px 2px 4px #6D1137;
-}
-
-.nb {
-  border-right: none;
-}
-
-button {
-  padding: 10px 15px;
-  margin: 15px;
-  text-align: center;
-  font-size: 16px;
-  color: white;
-  background-color: #00199F;
-  cursor: pointer;
 }
 
 .panel h1 {

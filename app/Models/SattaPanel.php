@@ -8,6 +8,7 @@ use CodeIgniter\Model;
 
 class SattaModel extends Model
 {
-
+    protected $primaryKey = 'id';
+    protected $table      = 'satta_panel';
     protected $allowedFields = ['satta_number', 'current_date', 'satta_id'];
 }

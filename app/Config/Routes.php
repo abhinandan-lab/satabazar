@@ -46,8 +46,14 @@ $routes->post('adminlogin', 'Home::adminLogin');
 
 $routes->group('', ['filter'=> 'isAdminLoggedin'], function($routes){
     $routes->get('admin', 'Home::admin');
+
     $routes->get('create', 'Home::adminCreate');
-    $routes->post('create', 'Home::adminCreate');   
+    $routes->post('create', 'Home::adminCreate');
+
+    $routes->get('satta-edit/(:num)', 'Home::adminSattaEdit/$1');
+    $routes->post('satta-edit', 'Home::adminSattaEdit');   
+
+    $routes->get('satta-delete/(:num)', 'Home::adminSattaDelete/$1');
 });
 
 
