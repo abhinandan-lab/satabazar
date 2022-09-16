@@ -207,6 +207,9 @@ class Home extends BaseController
         }
 
 
+        $postReqSataID = (int)$this->request->getVar('id');
+
+
         $request = \Config\Services::request();
         $session = \Config\Services::session();
 
@@ -220,7 +223,7 @@ class Home extends BaseController
             'satta_number'    => $sattanumber,
         ]; 
 
-        $rowPanel = $sataPanelModel->where('satta_id', $this->request->getVar('id'))->orderBy('created_at', 'desc')->first();
+        $rowPanel = $sataPanelModel->where('satta_id', $postReqSataID)->orderBy('created_at', 'desc')->first();
 
         if(isTodayDate($rowPanel['created_at']) == 1) {
             // today's date
@@ -228,23 +231,26 @@ class Home extends BaseController
 
             $sataPanelData = [
                 'satta_number'    => $sattanumber,
-                // 'current_date'    => $this->request->getVar('start_time'),
-                // 'satta_id '    => $this->request->getVar('end_time'),
+                'current_date'    => date('Y-m-d h:i a', time()),
+                'satta_id'    => $postReqSataID,
             ];
 
             $sataPanelModel->update($rowPanel_id, $sataPanelData);
-            
-            // return redirect('admin');
 
         }
-        else {
+
+        if(isTodayDate($rowPanel['created_at']) == 0) {
             // next day or another day
+            $sataPanelDataNewDay = [
+                'satta_number'    => $sattanumber,
+                'current_date'    => date('Y-m-d h:i a', time()),
+                'satta_id'    =>  $postReqSataID,
+            ];
+
+            $sataPanelModel->insert($sataPanelDataNewDay);
         }
         
-
-
-        $satamodel->update($this->request->getVar('id'), $sattaData);
-
+        $satamodel->update($postReqSataID, $sattaData);
 
         // going to home with flash data
         $session->setFlashdata('success', 'list updated successfully');
@@ -259,13 +265,14 @@ class Home extends BaseController
         $satamodel = new SattaModel();
         $row = $satamodel->find($id);
 
+        $sataPanelModel = new SattaPanelModel();
+        
         if($row != null ) {
+            $sataPanelModel->where('satta_id', $id)->delete();
             $satamodel->delete($id);
-
 
             $session->setFlashdata('success', 'list removed successfully');
             return redirect('admin');
-
         }
     }
 
@@ -276,14 +283,27 @@ class Home extends BaseController
         // $date = date('m/d/Y h:i:s a', time());
         // echo gettype( $date );
 
-        $onlydate = substr('2022-09-25 22:43:14', 0, 10);
-        echo $onlydate;
+        // $onlydate = substr('2022-09-25 22:43:14', 0, 10);
+        // echo $onlydate;
 
-        echo '<br>';
+        // echo '<br>';
 
-        date_default_timezone_set("Asia/Calcutta");
-        $currentDate = date('Y-m-d', time());
-        return $currentDate;
+        echo '<pre>';
+
+        // date_default_timezone_set("Asia/Calcutta");
+        // $currentDate = date('Y-m-d', time());
+        // return $currentDate;
+
+        $id = 3;
+        $satamodel = new SattaModel();
+        $row = $satamodel->find($id);
+
+        $sataPanelModel = new SattaPanelModel();
+        $rowsPanel = $sataPanelModel->where('satta_id', $id)->findAll();
+        $sataPanelModel->where('satta_id', $id)->delete();
+        // $userModel->delete([1, 2, 3]);
+
+        print_r($rowsPanel);
 
 
     }

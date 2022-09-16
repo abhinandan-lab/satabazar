@@ -7,7 +7,7 @@ function isTodayDate($date) {
     $onlydate = substr($date, 0, 10);
 
 
-    date_default_timezone_set("Asia/Calcutta");
+    // date_default_timezone_set("Asia/Calcutta");
     $currentDate = date('Y-m-d', time());
 
     if($onlydate == $currentDate){

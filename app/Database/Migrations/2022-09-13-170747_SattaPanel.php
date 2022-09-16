@@ -45,7 +45,7 @@ class SattaPanel extends Migration
         $this->forge->createTable('satta_panel');
 
         // $db->query("ALTER TABLE `user_info` ADD FOREIGN KEY ('user_id') REFERENCES `user`(`id`) ON DELETE CASCADE ON UPDATE NO ACTION;");
-        $db->query("ALTER TABLE `satta_panel` ADD FOREIGN KEY (`satta_id`) REFERENCES `satta`(`id`) ON DELETE CASCADE ON UPDATE NO ACTION; ");
+        // $db->query("ALTER TABLE `satta_panel` ADD FOREIGN KEY (`satta_id`) REFERENCES `satta`(`id`) ON DELETE CASCADE ON UPDATE CASCADE ; ");
 
     }
 

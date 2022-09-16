@@ -86,3 +86,225 @@ ORDER BY `created_at` DESC', [...], false)
  9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-16 20:40:23 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`satta`.`satta_panel`, CONSTRAINT `satta_panel_ibfk_1` FOREIGN KEY (`satta_id`) REFERENCES `satta` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION) in C:\xampp\htdocs\satabazar\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\satabazar\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\xampp\htdocs\satabazar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\xampp\htdocs\satabazar\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\xampp\htdocs\satabazar\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\xampp\htdocs\satabazar\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\satabazar\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\satabazar\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\satabazar\app\Controllers\Home.php(256): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(907): App\Controllers\Home->adminSattaEdit()
+#9 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\satabazar\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-09-16 20:40:23 --> Cannot add or update a child row: a foreign key constraint fails (`satta`.`satta_panel`, CONSTRAINT `satta_panel_ibfk_1` FOREIGN KEY (`satta_id`) REFERENCES `satta` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `satta_panel` (`satta_number`) VALUES (\'33321444\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `satta_panel` (`satta_number`) VALUES (\'33321444\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `satta_panel` (`satta_number`) VALUES (\'33321444\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `satta_panel` (`satta_number`) VALUES (:satta_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(256): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminSattaEdit()
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-16 20:44:47 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`satta`.`satta_panel`, CONSTRAINT `satta_panel_ibfk_1` FOREIGN KEY (`satta_id`) REFERENCES `satta` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\satabazar\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\satabazar\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\xampp\htdocs\satabazar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\xampp\htdocs\satabazar\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\xampp\htdocs\satabazar\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\xampp\htdocs\satabazar\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\satabazar\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\satabazar\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\satabazar\app\Controllers\Home.php(256): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(907): App\Controllers\Home->adminSattaEdit()
+#9 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\satabazar\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-09-16 20:44:47 --> Cannot add or update a child row: a foreign key constraint fails (`satta`.`satta_panel`, CONSTRAINT `satta_panel_ibfk_1` FOREIGN KEY (`satta_id`) REFERENCES `satta` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `satta_panel` (`satta_number`) VALUES (\'33321444\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `satta_panel` (`satta_number`) VALUES (\'33321444\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `satta_panel` (`satta_number`) VALUES (\'33321444\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `satta_panel` (`satta_number`) VALUES (:satta_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(256): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminSattaEdit()
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-16 20:44:50 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`satta`.`satta_panel`, CONSTRAINT `satta_panel_ibfk_1` FOREIGN KEY (`satta_id`) REFERENCES `satta` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\satabazar\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\satabazar\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\xampp\htdocs\satabazar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\xampp\htdocs\satabazar\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\xampp\htdocs\satabazar\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\xampp\htdocs\satabazar\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\satabazar\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\satabazar\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\satabazar\app\Controllers\Home.php(256): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(907): App\Controllers\Home->adminSattaEdit()
+#9 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\satabazar\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-09-16 20:44:50 --> Cannot add or update a child row: a foreign key constraint fails (`satta`.`satta_panel`, CONSTRAINT `satta_panel_ibfk_1` FOREIGN KEY (`satta_id`) REFERENCES `satta` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `satta_panel` (`satta_number`) VALUES (\'33321444\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `satta_panel` (`satta_number`) VALUES (\'33321444\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `satta_panel` (`satta_number`) VALUES (\'33321444\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `satta_panel` (`satta_number`) VALUES (:satta_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(256): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminSattaEdit()
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-16 20:44:55 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`satta`.`satta_panel`, CONSTRAINT `satta_panel_ibfk_1` FOREIGN KEY (`satta_id`) REFERENCES `satta` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\satabazar\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\satabazar\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\xampp\htdocs\satabazar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\xampp\htdocs\satabazar\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\xampp\htdocs\satabazar\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\xampp\htdocs\satabazar\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\satabazar\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\satabazar\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\satabazar\app\Controllers\Home.php(256): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(907): App\Controllers\Home->adminSattaEdit()
+#9 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\satabazar\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-09-16 20:44:55 --> Cannot add or update a child row: a foreign key constraint fails (`satta`.`satta_panel`, CONSTRAINT `satta_panel_ibfk_1` FOREIGN KEY (`satta_id`) REFERENCES `satta` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `satta_panel` (`satta_number`) VALUES (\'33321444\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `satta_panel` (`satta_number`) VALUES (\'33321444\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `satta_panel` (`satta_number`) VALUES (\'33321444\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `satta_panel` (`satta_number`) VALUES (:satta_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(256): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminSattaEdit()
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-16 20:45:18 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`satta`.`satta_panel`, CONSTRAINT `satta_panel_ibfk_1` FOREIGN KEY (`satta_id`) REFERENCES `satta` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\satabazar\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\satabazar\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\xampp\htdocs\satabazar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\xampp\htdocs\satabazar\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\xampp\htdocs\satabazar\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\xampp\htdocs\satabazar\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\satabazar\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\satabazar\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\satabazar\app\Controllers\Home.php(256): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(907): App\Controllers\Home->adminSattaEdit()
+#9 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\satabazar\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-09-16 20:45:18 --> Cannot add or update a child row: a foreign key constraint fails (`satta`.`satta_panel`, CONSTRAINT `satta_panel_ibfk_1` FOREIGN KEY (`satta_id`) REFERENCES `satta` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `satta_panel` (`satta_number`) VALUES (\'33321444\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `satta_panel` (`satta_number`) VALUES (\'33321444\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `satta_panel` (`satta_number`) VALUES (\'33321444\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `satta_panel` (`satta_number`) VALUES (:satta_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(256): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminSattaEdit()
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-16 21:01:27 --> Undefined variable $id
+in APPPATH\Controllers\Home.php on line 307.
+ 1 APPPATH\Controllers\Home.php(307): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Controllers\\Home.php', 307)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-16 21:02:22 --> mysqli_sql_exception: Unknown column 'user_id' in 'where clause' in C:\xampp\htdocs\satabazar\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\satabazar\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\satabazar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\satabazar\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\satabazar\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\satabazar\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\satabazar\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\satabazar\app\Controllers\Home.php(311): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(907): App\Controllers\Home->test()
+#8 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\satabazar\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\satabazar\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-16 21:02:22 --> Unknown column 'user_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `satta_panel`
+WHERE `user_id` = 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `satta_panel`
+WHERE `user_id` = 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `satta_panel`
+WHERE `user_id` = 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `satta_panel`
+WHERE `user_id` = :user_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Home.php(311): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-16 21:09:20 --> Undefined variable $userModel
+in APPPATH\Controllers\Home.php on line 314.
+ 1 APPPATH\Controllers\Home.php(314): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userModel', 'APPPATH\\Controllers\\Home.php', 314)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-16 21:09:33 --> Undefined variable $rowsPanel
+in APPPATH\Controllers\Home.php on line 317.
+ 1 APPPATH\Controllers\Home.php(317): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rowsPanel', 'APPPATH\\Controllers\\Home.php', 317)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-16 21:09:35 --> Undefined variable $rowsPanel
+in APPPATH\Controllers\Home.php on line 317.
+ 1 APPPATH\Controllers\Home.php(317): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rowsPanel', 'APPPATH\\Controllers\\Home.php', 317)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-16 21:09:36 --> Undefined variable $rowsPanel
+in APPPATH\Controllers\Home.php on line 317.
+ 1 APPPATH\Controllers\Home.php(317): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rowsPanel', 'APPPATH\\Controllers\\Home.php', 317)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-16 21:55:29 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 233.
+ 1 APPPATH\Controllers\Home.php(233): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Home.php', 233)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminSattaEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
