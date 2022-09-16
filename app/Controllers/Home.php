@@ -4,12 +4,12 @@ namespace App\Controllers;
 
 use \App\Models\AdminModel;
 use \App\Models\SattaModel;
-use \App\Models\SattaPanel;
+use \App\Models\SattaPanelModel;
 
 class Home extends BaseController
 {
 
-    protected $helpers = ['form', 'session'];
+    protected $helpers = ['form', 'session', 'SmallFunctions'];
 
 
     public function index()
@@ -128,23 +128,49 @@ class Home extends BaseController
         // return view('User/setemail');
 
 
-        //saving to db
+        //saving to satta
         $satta = new SattaModel();
 
         $sattanumber = $this->request->getVar('first_three_digit') .  $this->request->getVar('first_one_digit') . $this->request->getVar('last_one_digit') . $this->request->getVar('last_three_digit');
+        $sataname = $this->request->getVar('name');
 
         $sattaData = [
-            'name' => $this->request->getVar('name'),
+            'name' => $sataname,
             'start_time'    => $this->request->getVar('start_time'),
             'end_time'    => $this->request->getVar('end_time'),
             'satta_number'    => $sattanumber,
         ]; 
 
-        $satta->insert($sattaData);
 
+
+        $sataPanelRow = $satta->where( 'name', $sataname)->first();
+
+        if($sataPanelRow == null) {
+
+            $satta->insert($sattaData);
+
+            $sataPanelRow = $satta->where( 'name', $sataname)->first();
+
+            // saving to satta_panel
+            $satapanel = new SattaPanelModel();
+
+            date_default_timezone_set("Asia/Calcutta");
+            $currentDate = date('Y-m-d h:i a', time());
+
+            $sattapaneldata = [
+                'satta_number' => $sattanumber,
+                'current_date' => $currentDate,
+                'satta_id' => $sataPanelRow['id'],
+            ];
+
+            $satapanel->insert($sattapaneldata);
+
+            $session->setFlashdata('success', 'list created successfully');
+            return redirect('create');
+        }
 
         // going to home with flash data
-        $session->setFlashdata('success', 'list created successfully');
+        $session->setFlashdata('success', 'list already exist!');
         return redirect('create');
     }
 
@@ -152,6 +178,7 @@ class Home extends BaseController
     public function adminSattaEdit($id = null) {
         
         $satamodel = new SattaModel();
+        $sataPanelModel = new SattaPanelModel();
         $row = $satamodel->find($id);
 
         if (strtolower($this->request->getMethod()) !== 'post') {
@@ -172,6 +199,7 @@ class Home extends BaseController
 
         ];
 
+        // post request
         if (! $this->validate($rules)) {
             return view('adminEdit', [
                 'validation' => $this->validator, 
@@ -192,7 +220,31 @@ class Home extends BaseController
             'satta_number'    => $sattanumber,
         ]; 
 
+        $rowPanel = $sataPanelModel->where('satta_id', $this->request->getVar('id'))->orderBy('created_at', 'desc')->first();
+
+        if(isTodayDate($rowPanel['created_at']) == 1) {
+            // today's date
+            $rowPanel_id = $rowPanel['id'];
+
+            $sataPanelData = [
+                'satta_number'    => $sattanumber,
+                // 'current_date'    => $this->request->getVar('start_time'),
+                // 'satta_id '    => $this->request->getVar('end_time'),
+            ];
+
+            $sataPanelModel->update($rowPanel_id, $sataPanelData);
+            
+            // return redirect('admin');
+
+        }
+        else {
+            // next day or another day
+        }
+        
+
+
         $satamodel->update($this->request->getVar('id'), $sattaData);
+
 
         // going to home with flash data
         $session->setFlashdata('success', 'list updated successfully');
@@ -215,5 +267,24 @@ class Home extends BaseController
             return redirect('admin');
 
         }
+    }
+
+
+    public function test() {
+        // date_default_timezone_set("Asia/Calcutta");
+        // $date = date('m/d/Y', time());
+        // $date = date('m/d/Y h:i:s a', time());
+        // echo gettype( $date );
+
+        $onlydate = substr('2022-09-25 22:43:14', 0, 10);
+        echo $onlydate;
+
+        echo '<br>';
+
+        date_default_timezone_set("Asia/Calcutta");
+        $currentDate = date('Y-m-d', time());
+        return $currentDate;
+
+
     }
 }

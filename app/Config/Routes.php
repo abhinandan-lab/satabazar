@@ -43,6 +43,9 @@ $routes->get('adminlogin', 'Home::adminLogin');
 $routes->post('adminlogin', 'Home::adminLogin');
 
 
+$routes->get('test', 'Home::test');
+
+
 
 $routes->group('', ['filter'=> 'isAdminLoggedin'], function($routes){
     $routes->get('admin', 'Home::admin');

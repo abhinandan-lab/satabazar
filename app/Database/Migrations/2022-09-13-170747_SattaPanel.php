@@ -23,7 +23,8 @@ class SattaPanel extends Migration
             ],
 
             'current_date' => [
-                'type' => 'DATE',
+                'type' => 'VARCHAR',
+                'constraint' => 25,
                 'null' => true,
             ],
 
