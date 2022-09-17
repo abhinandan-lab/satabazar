@@ -36,7 +36,7 @@
                     <p><?= date('h:i A', strtotime($row['start_time'])) ?> &nbsp; &nbsp; <?= date('h:i A', strtotime($row['end_time'])) ?></p>
                 </div>
              
-                <a href="#">Panel</a>
+                <a href="satta-panel/<?= $row['id'] ?>" target="_blank">Panel</a>
 
             </div>
 

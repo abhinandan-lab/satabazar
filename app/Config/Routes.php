@@ -37,15 +37,18 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->get('test', 'Home::test');
+
+
+$routes->get('satta-panel/(:num)', 'Home::sattaPanel/$1');
+
+
+
+
 
 // admin routes
 $routes->get('adminlogin', 'Home::adminLogin');
 $routes->post('adminlogin', 'Home::adminLogin');
-
-
-$routes->get('test', 'Home::test');
-
-
 
 $routes->group('', ['filter'=> 'isAdminLoggedin'], function($routes){
     $routes->get('admin', 'Home::admin');

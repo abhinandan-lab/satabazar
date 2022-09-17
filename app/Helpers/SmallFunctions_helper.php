@@ -6,7 +6,6 @@ function isTodayDate($date) {
 
     $onlydate = substr($date, 0, 10);
 
-
     // date_default_timezone_set("Asia/Calcutta");
     $currentDate = date('Y-m-d', time());
 
@@ -16,5 +15,34 @@ function isTodayDate($date) {
     else {
         return 0;
     }
+}
 
+function findPreviouMonDate($date, $changeFormat = false) {
+
+    $onlydate = substr($date, 0, 10);
+
+    $lastMonday = date('Y-m-d',strtotime('last monday', strtotime($onlydate)));
+
+
+    if($changeFormat) {
+
+        return date("d/m/Y", strtotime($lastMonday) );
+    }
+
+    return $lastMonday;
+}
+
+
+function findNextSunDate($date, $changeFormat = false) {
+
+    $onlydate = substr($date, 0, 10);
+
+    $lastSunday = date('Y-m-d',strtotime('next sunday', strtotime($onlydate)));
+
+    if($changeFormat) {
+
+        return date("d/m/Y", strtotime($lastSunday) );
+    }
+
+    return $lastSunday;
 }

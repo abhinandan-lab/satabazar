@@ -49,7 +49,7 @@
                         <a href="satta-edit/<?= $row['id'] ?>">Edit</a>
                     </div>
                 </div>
-                <a href="panel/<?= $row['id'] ?>" targer="_blank">Panel</a>
+                <a href="satta-panel/<?= $row['id'] ?>" target="_blank">Panel</a>
             </div>
 
             <?php } ?>

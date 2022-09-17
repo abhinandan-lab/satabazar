@@ -82,8 +82,7 @@ class Home extends BaseController
 
         $satamodel = new SattaModel();
         $data = $satamodel->findall();
-        // echo '<pre>';
-        // print_r($data);
+
 
         return view('admin', ['list'=>$data]);
     }
@@ -116,17 +115,6 @@ class Home extends BaseController
 
         $request = \Config\Services::request();
         $session = \Config\Services::session();
-
-  
-        // echo $this->request->getVar('name');
-        // echo '<br>';
-        // echo $this->request->getVar('start_time');
-        // echo '<br>';
-        // echo $this->request->getVar('end_time');
-        // echo $this->request->getVar('name');
-        // echo '<br>';
-        // return view('User/setemail');
-
 
         //saving to satta
         $satta = new SattaModel();
@@ -277,6 +265,30 @@ class Home extends BaseController
     }
 
 
+    public function sattaPanel($id = null) {
+
+
+
+        echo $id;
+
+        if($id != null) {
+            
+            $sataPanelModel = new SattaPanelModel();
+            
+            $rowsPanel = $sataPanelModel->where('satta_id', $id)->orderBy('created_at', 'asc')->findAll();
+            // $rowsPanel = $sataPanelModel->where(['satta_id' => $id, 'id' => 3])->orderBy('created_at', 'asc')->findAll();
+
+            echo '<pre>';
+            print_r($rowsPanel);
+
+            return view('satta_panel', ['rows' => $rowsPanel]);
+        }
+
+        return view('satta_panel', ['rows' => null]);
+
+    }
+
+
     public function test() {
         // date_default_timezone_set("Asia/Calcutta");
         // $date = date('m/d/Y', time());
@@ -288,22 +300,32 @@ class Home extends BaseController
 
         // echo '<br>';
 
-        echo '<pre>';
+        // echo '<pre>';
 
         // date_default_timezone_set("Asia/Calcutta");
         // $currentDate = date('Y-m-d', time());
         // return $currentDate;
 
-        $id = 3;
-        $satamodel = new SattaModel();
-        $row = $satamodel->find($id);
+        // $id = 3;
+        // $satamodel = new SattaModel();
+        // $row = $satamodel->find($id);
 
-        $sataPanelModel = new SattaPanelModel();
-        $rowsPanel = $sataPanelModel->where('satta_id', $id)->findAll();
-        $sataPanelModel->where('satta_id', $id)->delete();
-        // $userModel->delete([1, 2, 3]);
+        // $sataPanelModel = new SattaPanelModel();
+        // $rowsPanel = $sataPanelModel->where('satta_id', $id)->findAll();
+        // $sataPanelModel->where('satta_id', $id)->delete();
+        // // $userModel->delete([1, 2, 3]);
 
-        print_r($rowsPanel);
+        // print_r($rowsPanel);
+
+
+        echo strtotime("last Monday");
+        echo '<br>';
+        // echo date('Y-m-d',strtotime('last monday', strtotime('2022-09-28')));
+        
+        echo findPreviouMonDate('2022-08-16', true);
+        echo '<br>';
+
+        return findNextSunDate('2022-08-16');
 
 
     }
