@@ -21,8 +21,19 @@ function findPreviouMonDate($date, $changeFormat = false) {
 
     $onlydate = substr($date, 0, 10);
 
+    $day = date('D', strtotime(substr($onlydate, 0, 10)));
+    
     $lastMonday = date('Y-m-d',strtotime('last monday', strtotime($onlydate)));
-
+    
+    
+    if($day == 'Mon' && $changeFormat = true) {
+        return date("d/m/Y", strtotime($onlydate) );
+    }
+    
+    if($day == 'Mon') {
+        return $onlydate;
+    }
+    
 
     if($changeFormat) {
 
@@ -37,7 +48,18 @@ function findNextSunDate($date, $changeFormat = false) {
 
     $onlydate = substr($date, 0, 10);
 
+    $day = date('D', strtotime(substr($onlydate, 0, 10)));
+
     $lastSunday = date('Y-m-d',strtotime('next sunday', strtotime($onlydate)));
+
+
+    if($day == 'Sun' && $changeFormat = true) {
+        return date("d/m/Y", strtotime($onlydate) );
+    }
+    
+    if($day == 'Sun') {
+        return $onlydate;
+    }
 
     if($changeFormat) {
 
@@ -45,4 +67,11 @@ function findNextSunDate($date, $changeFormat = false) {
     }
 
     return $lastSunday;
+}
+
+function findCurrentDay($date) {
+
+    $onlydate = strtotime(substr($date, 0, 10));
+    $day = date('D', $onlydate);
+    return $day;
 }

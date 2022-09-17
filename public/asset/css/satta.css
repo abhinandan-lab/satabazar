@@ -74,6 +74,7 @@ button, a {
   color: #6D1137;
   font-family: "Times New Roman", Times, serif;
   font-size: 1.1em;
+  background-color: none;
 }
 .sattalist .login .link a:hover {
   color: #00199F;

@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<?=$this->extend("head")?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-
-    <link rel="stylesheet" href="<?= base_url();?>/public/asset/css/satta.css">
-</head>
-
-<body>
+<?=$this->section("content")?>
 
     <div class="container">
         <h1 class="logo">sata bazar</h1>
@@ -41,45 +30,123 @@
 
                     <?php
 
+                echo '<pre>';
+                print_r($rows);
+                echo '</pre>';
 
 
 
+                for ($index=0; $index < count($rows) ; $index++) { 
 
-                    $startDateStr = $rows[0]['created_at'];
-                    $mondayDate = findPreviouMonDate($startDateStr);
-                    $sundayDate = findNextSunDate($startDateStr);
+                    $createNewRow = true;
+
+                    if($createNewRow) {
+                        // naya raya banega 
+                    }
+
+                    // nahi to pahle vale me chalega
+                    
+                    $monday = findPreviouMonDate($rows[$index]['created_at'], true);
+                    $sunday = findNextSunDate($rows[$index]['created_at'], true);
+
+                    $currentDay = findCurrentDay($rows[$index]['created_at']);
+
+
+
 
                     
-                    print_r($rows[0]);
+                    $n = $rows[$index]['satta_number'];
 
-                    for ($index = 0;  $index < count($rows); $index++) {
+                    $tdstar = ' <td class="nb" >
+                    *<br>
+                    *<br>
+                    *<br>
+                    </td>
+                    <td>**</td>
+                    <td class="nb">
+                        *<br>
+                        *<br>
+                        *<br>
+                    </td> ' ;
+    
+                    $tdnumber =  ' <td class="nb" >
+                    '. substr($n, 0, 1) . ' <br>
+                    '. substr($n, 1, 1) . ' <br>
+                    '. substr($n, 2, 1) . ' <br>
+                    </td>
+                    <td> '. substr($n, 3, 2) . '</td>
+                    <td class="nb">
+                    '. substr($n, 5, 1) . ' <br>
+                    '. substr($n, 6, 1) . ' <br>
+                    '. substr($n, 7, 1) . ' <br>
+                    </td> ' ;
+                    
+                    // echo '<h1>'. $n . '</h1>';
+                    echo '<h1>'. $currentDay . '</h1>';
+                    echo '<h1>'. $monday . ' to '. $sunday . '</h1>';
+                    echo '<h1>'. $sunday . '</h1>';
+                    
+                    echo "<tr>  <td> $monday <br> to <br> $sunday </td>";
+                    
+ 
+                    
 
 
+                    for ($i=0; $i <= 6 ; $i++) { 
 
-                        $currentRow = $rows[$index];
+                        if($i == 0 && $currentDay == 'Mon' ){
+                            echo $tdnumber;
+                            continue;
+                        }
 
+                        if($i == 1 && $currentDay == 'Tue') {
+                            echo $tdnumber;
+                            continue;
+                        }
 
-
-
-                        $mondayDate = findPreviouMonDate($currentRow['created_at'], true);
-                        $sundayDate = findNextSunDate($currentRow['created_at'], true);
-
-                        
-
-                        // loop to create table row
-
-                        ?>
-
-                        <tr>
-                        <td> <?= $mondayDate ?> <br> to <br>  <?= $sundayDate ?> </td>
-
+                        if($i == 2 && $currentDay == 'Wed') {
+                            echo $tdnumber;
+                            continue;
+                        }
 
 
-                        
+                        if($i == 3 && $currentDay == 'Thu') {
+                            echo $tdnumber;
+                            continue;
+                        }
 
-         <?php       } ?>
 
-                    <h1><?= count($rows) ?></h1>
+                        if($i == 4 && $currentDay == 'Fri') {
+                            echo $tdnumber;
+                            continue;
+                        }
+
+
+                        if($i == 5 && $currentDay == 'Sat') {
+                            echo $tdnumber;
+                            continue;
+                        }
+
+
+                        if($i == 6 && $currentDay == 'Sun') {
+                            echo $tdnumber;
+                            continue;
+                        }
+
+
+                        else {
+
+                            echo $tdstar;
+                        }
+
+                    }
+
+
+                }
+                
+                
+                
+                ?>
 
 
                     <tr>
@@ -271,3 +338,6 @@
 </body>
 
 </html>
+
+
+<?=$this->endSection()?>

@@ -1,0 +1,11 @@
+CRITICAL - 2022-09-18 00:02:56 --> Undefined array key 3
+in APPPATH\Views\satta_panel.php on line 52.
+ 1 APPPATH\Views\satta_panel.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 3', 'APPPATH\\Views\\satta_panel.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_panel.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_panel', [], true)
+ 5 APPPATH\Controllers\Home.php(284): view('satta_panel', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaPanel('1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

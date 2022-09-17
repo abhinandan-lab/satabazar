@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<?=$this->extend("head")?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-
-    <link rel="stylesheet" href="<?= base_url();?>/public/asset/css/satta.css">
-</head>
-
-<body>
+<?=$this->section("content")?>
 
     <?php
 
@@ -63,7 +52,7 @@ $session = \Config\Services::session();
 
                 <div class="link">
 
-                    <a href="#">forgot password?</a>
+                    <!-- <a href="#">forgot password?</a> -->
                 </div>
 
 
@@ -79,3 +68,5 @@ $session = \Config\Services::session();
 </body>
 
 </html>
+
+<?=$this->endSection()?>

@@ -278,8 +278,8 @@ class Home extends BaseController
             $rowsPanel = $sataPanelModel->where('satta_id', $id)->orderBy('created_at', 'asc')->findAll();
             // $rowsPanel = $sataPanelModel->where(['satta_id' => $id, 'id' => 3])->orderBy('created_at', 'asc')->findAll();
 
-            echo '<pre>';
-            print_r($rowsPanel);
+            // echo '<pre>';
+            // print_r($rowsPanel);
 
             return view('satta_panel', ['rows' => $rowsPanel]);
         }
@@ -318,14 +318,20 @@ class Home extends BaseController
         // print_r($rowsPanel);
 
 
-        echo strtotime("last Monday");
-        echo '<br>';
-        // echo date('Y-m-d',strtotime('last monday', strtotime('2022-09-28')));
+        // echo strtotime("last Monday");
+        // echo '<br>';
+        // // echo date('Y-m-d',strtotime('last monday', strtotime('2022-09-28')));
         
-        echo findPreviouMonDate('2022-08-16', true);
-        echo '<br>';
+        // echo findPreviouMonDate('2022-08-16', true);
+        // echo '<br>';
 
-        return findNextSunDate('2022-08-16');
+        // return findNextSunDate('2022-08-16');
+
+
+        $timestamp = strtotime('2009-10-22');
+
+        $day = date('D', $timestamp);
+        echo $day;
 
 
     }
