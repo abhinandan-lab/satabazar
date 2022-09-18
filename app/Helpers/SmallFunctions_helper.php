@@ -26,7 +26,7 @@ function findPreviouMonDate($date, $changeFormat = false) {
     $lastMonday = date('Y-m-d',strtotime('last monday', strtotime($onlydate)));
     
     
-    if($day == 'Mon' && $changeFormat = true) {
+    if($day == 'Mon' && $changeFormat == true) {
         return date("d/m/Y", strtotime($onlydate) );
     }
     
@@ -53,7 +53,7 @@ function findNextSunDate($date, $changeFormat = false) {
     $lastSunday = date('Y-m-d',strtotime('next sunday', strtotime($onlydate)));
 
 
-    if($day == 'Sun' && $changeFormat = true) {
+    if($day == 'Sun' && $changeFormat == true) {
         return date("d/m/Y", strtotime($onlydate) );
     }
     

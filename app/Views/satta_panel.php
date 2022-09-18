@@ -30,26 +30,75 @@
 
                     <?php
 
-                echo '<pre>';
-                print_r($rows);
-                echo '</pre>';
+                // echo '<pre>';
+                // print_r($rows);
+                // echo '</pre>';
 
 
 
-                for ($index=0; $index < count($rows) ; $index++) { 
+                for ($index=0; $index < count($rows) ; $index++) {
+                    // for ($index=0; $index < 1 ; $index++) { 
 
-                    $createNewRow = true;
-
-                    if($createNewRow) {
-                        // naya raya banega 
-                    }
-
-                    // nahi to pahle vale me chalega
                     
                     $monday = findPreviouMonDate($rows[$index]['created_at'], true);
                     $sunday = findNextSunDate($rows[$index]['created_at'], true);
 
                     $currentDay = findCurrentDay($rows[$index]['created_at']);
+                    $currentDate = substr($rows[$index]['created_at'], 0, 10);
+
+                    echo '<h1>'. $currentDate . '</h1>';
+
+                    // dates without format change
+                    $m = findPreviouMonDate($rows[$index]['created_at']);
+                    $s = findNextSunDate($rows[$index]['created_at']);
+
+
+                    if($index != 0) {
+                        $prevSun =  findNextSunDate($rows[$index - 1]['created_at']);  
+                        
+                        if($currentDate > $prevSun) {
+                            // create new row
+
+                            // echo '<h1> create New ROw'. $index . '</h1>';
+                            echo "<tr>  <td> $monday <br> to <br> $sunday </td>";
+                        }
+
+                    }
+                    else {
+                        // at index 0
+                        echo "<tr>  <td> $monday <br> to <br> $sunday </td>";
+
+                    }
+
+
+
+                    // echo 'monday = '.$monday;
+                    // echo '<br>';
+                    // echo 'sunday = '.$sunday;
+                    
+                    // echo '<br>';
+                    // echo '<br>';
+                    // echo '<br>';
+                    // // $m = new DateTime($monday);
+                    // // echo $m;
+
+                    // $m = findPreviouMonDate('2000-01-22');
+                    // $s = findNextSunDate('1999-12-05');
+
+                    // echo 'monday = '.$m;
+                    // echo '<br>';
+                    // echo 'sunday = '.$s;
+                    // echo '<br>';
+                    // if ( $m > $s ) {
+                    //     echo 'monday is gretaer';
+                    // }
+                    // else {
+                    //     echo 'sunday is greater';
+                    // }
+
+
+
+
 
 
 
@@ -82,11 +131,11 @@
                     </td> ' ;
                     
                     // echo '<h1>'. $n . '</h1>';
-                    echo '<h1>'. $currentDay . '</h1>';
-                    echo '<h1>'. $monday . ' to '. $sunday . '</h1>';
-                    echo '<h1>'. $sunday . '</h1>';
+                    // echo '<h1>'. $currentDay . '</h1>';
+                    // echo '<h1>'. $monday . ' to '. $sunday . '</h1>';
+                    // echo '<h1>'. $sunday . '</h1>';
                     
-                    echo "<tr>  <td> $monday <br> to <br> $sunday </td>";
+                    // echo "<tr>  <td> $monday <br> to <br> $sunday </td>";
                     
  
                     
@@ -141,191 +190,14 @@
 
                     }
 
+                    // echo '</tr>';
+
 
                 }
                 
                 
                 
                 ?>
-
-
-                    <tr>
-                        <td>18/12/1998 <br> to <br> 18/12/1998 </td>
-
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-                        <td>89</td>
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-                        <td>89</td>
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-                        <td>89</td>
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-                        <td>89</td>
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-                        <td>89</td>
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-                        <td>89</td>
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-                        <td>89</td>
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-
-                    </tr>
-
-                    <tr>
-                        <td>18/12/1998 <br> to <br> 18/12/1998 </td>
-
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-                        <td>89</td>
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-                        <td>89</td>
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-                        <td>89</td>
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-                        <td>89</td>
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-                        <td>89</td>
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-                        <td>89</td>
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-                        <td>89</td>
-                        <td class="nb">
-                            1<br>
-                            1<br>
-                            1<br>
-                        </td>
-
-                    </tr>
 
 
                 </tbody>
