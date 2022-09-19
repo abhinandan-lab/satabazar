@@ -328,10 +328,19 @@ class Home extends BaseController
         // return findNextSunDate('2022-08-16');
 
 
-        $timestamp = strtotime('2009-10-22');
+        // $timestamp = strtotime('2009-10-22');
 
-        $day = date('D', $timestamp);
-        echo $day;
+        // $day = date('D', $timestamp);
+        // echo $day;
+
+        $newArray = [];
+        // echo $newArray;
+        
+        array_push($newArray, "abc");
+
+
+        array_push($newArray, [1,2]);
+        print_r($newArray);
 
 
     }

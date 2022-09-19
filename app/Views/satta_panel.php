@@ -30,14 +30,20 @@
 
                     <?php
 
-                // echo '<pre>';
+                echo '<pre>';
                 // print_r($rows);
                 // echo '</pre>';
 
 
+                $arrayData = [];
 
-                for ($index=0; $index < count($rows) ; $index++) {
-                    // for ($index=0; $index < 1 ; $index++) { 
+                $rowData = [];
+                $rowWeekData = [];
+
+
+
+                // for ($index=0; $index < count($rows) ; $index++) {
+                    for ($index=0; $index < 2 ; $index++) { 
 
                     
                     $monday = findPreviouMonDate($rows[$index]['created_at'], true);
@@ -46,11 +52,14 @@
                     $currentDay = findCurrentDay($rows[$index]['created_at']);
                     $currentDate = substr($rows[$index]['created_at'], 0, 10);
 
-                    echo '<h1>'. $currentDate . '</h1>';
+                    // echo '<h1>'. $currentDate . '</h1>';
 
                     // dates without format change
                     $m = findPreviouMonDate($rows[$index]['created_at']);
                     $s = findNextSunDate($rows[$index]['created_at']);
+
+
+
 
 
                     if($index != 0) {
@@ -59,16 +68,32 @@
                         if($currentDate > $prevSun) {
                             // create new row
 
+                            array_push($rowData, ['rowDatta' => $m ,$s] );
+
+                            echo '<pre>';
+                            // print_r($rowData);
+
+                            // array_push($row1);
+
                             // echo '<h1> create New ROw'. $index . '</h1>';
                             echo "<tr>  <td> $monday <br> to <br> $sunday </td>";
                         }
 
-                    }
-                    else {
-                        // at index 0
-                        echo "<tr>  <td> $monday <br> to <br> $sunday </td>";
+                        }
+                        else {
 
-                    }
+                            array_push($rowData, ['rowDatta' => $m ,$s] );
+
+                            echo '<pre>';
+                            // print_r($rowData);
+
+                            // at index 0
+                            echo "<tr>  <td> $monday <br> to <br> $sunday </td>";
+
+                        }
+
+
+
 
 
 
@@ -145,40 +170,47 @@
 
                         if($i == 0 && $currentDay == 'Mon' ){
                             echo $tdnumber;
+                            array_push($rowWeekData, $tdnumber);
                             continue;
                         }
 
                         if($i == 1 && $currentDay == 'Tue') {
                             echo $tdnumber;
+                            array_push($rowWeekData, $tdnumber);
                             continue;
                         }
 
                         if($i == 2 && $currentDay == 'Wed') {
                             echo $tdnumber;
+                            array_push($rowWeekData, $tdnumber);
                             continue;
                         }
 
 
                         if($i == 3 && $currentDay == 'Thu') {
                             echo $tdnumber;
+                            array_push($rowWeekData, $tdnumber);
                             continue;
                         }
 
 
                         if($i == 4 && $currentDay == 'Fri') {
                             echo $tdnumber;
+                            array_push($rowWeekData, $tdnumber);
                             continue;
                         }
 
 
                         if($i == 5 && $currentDay == 'Sat') {
                             echo $tdnumber;
+                            array_push($rowWeekData, $tdnumber);
                             continue;
                         }
 
 
                         if($i == 6 && $currentDay == 'Sun') {
                             echo $tdnumber;
+                            array_push($rowWeekData, $tdnumber);
                             continue;
                         }
 
@@ -186,11 +218,18 @@
                         else {
 
                             echo $tdstar;
+                            array_push($rowWeekData, $tdstar);
                         }
 
                     }
 
                     // echo '</tr>';
+
+                    array_push($rowData, ['rowweekData' => $rowWeekData ]);
+
+                    array_push($arrayData, ['rowData' => $rowData]);
+                    echo '<hr> <pre>';
+                    print_r($arrayData);
 
 
                 }
