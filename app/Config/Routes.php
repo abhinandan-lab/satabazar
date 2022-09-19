@@ -41,6 +41,7 @@ $routes->get('test', 'Home::test');
 
 
 $routes->get('satta-panel/(:num)', 'Home::sattaPanel/$1');
+$routes->get('satta-jodi/(:num)', 'Home::sattaJodi/$1');
 
 
 

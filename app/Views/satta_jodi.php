@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<?=$this->extend("head")?>
 
+<?=$this->section("content")?>
 
-    <link rel="stylesheet" href="/css/satta.css">
-</head>
-<body>
-
-    <div class="container">
+<div class="container">
         <h1 class="logo">sata bazar</h1>
 
 
@@ -35,14 +26,26 @@
                 <tbody>
 
                  <tr>
-                    <td>80</td>
-                    <td>80</td>
-                    <td>80</td>
-                    <td>80</td>
-                    <td>80</td>
-                    <td>80</td>
-                    <td>80</td>
 
+                 <?php 
+
+                 $datas = getPanelArrayData($rows);
+
+                 foreach ($datas as $data) { ?>
+
+                 <tr>
+
+                    <?php foreach($data[2] as $cell) { ?>
+
+                        <td><?= substr($cell, 3, 2) ?></td>
+
+                    <?php } ?>
+
+                    </tr>
+
+
+                 <?php } ?>
+                 
                  </tr>
 
                 
@@ -52,6 +55,10 @@
 
       
     </div>
-    
+
 </body>
+
 </html>
+
+
+<?=$this->endSection()?>

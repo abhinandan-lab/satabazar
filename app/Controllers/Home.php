@@ -266,10 +266,7 @@ class Home extends BaseController
 
 
     public function sattaPanel($id = null) {
-
-
-
-        echo $id;
+        // echo $id;
 
         if($id != null) {
             
@@ -280,12 +277,23 @@ class Home extends BaseController
 
             // echo '<pre>';
             // print_r($rowsPanel);
-
             return view('satta_panel', ['rows' => $rowsPanel]);
         }
 
         return view('satta_panel', ['rows' => null]);
 
+    }
+
+    public function sattaJodi($id = null) {
+        if($id != null) {
+            
+            $sataPanelModel = new SattaPanelModel();
+            
+            $rowsPanel = $sataPanelModel->where('satta_id', $id)->orderBy('created_at', 'asc')->findAll();
+            // echo 'praise the LORD';
+            return view('satta_jodi', ['rows' => $rowsPanel]);
+        }
+        return view('satta_jodi', ['rows' => null]);
     }
 
 
@@ -300,7 +308,7 @@ class Home extends BaseController
 
         // echo '<br>';
 
-        // echo '<pre>';
+        echo '<pre>';
 
         // date_default_timezone_set("Asia/Calcutta");
         // $currentDate = date('Y-m-d', time());
@@ -333,14 +341,24 @@ class Home extends BaseController
         // $day = date('D', $timestamp);
         // echo $day;
 
-        $newArray = [];
-        // echo $newArray;
+        // $newArray = [];
+        // // echo $newArray;
         
-        array_push($newArray, "abc");
+        // array_push($newArray, "abc");
 
 
-        array_push($newArray, [1,2]);
-        print_r($newArray);
+        // array_push($newArray, [1,2]);
+        // print_r($newArray);
+
+
+        $arr = ['a','b','c',['aa','bb','cc']];
+
+        print_r($arr);
+
+
+        $arr[1] = 'd';
+        $arr[3][2] = 'zz';
+        print_r($arr);
 
 
     }

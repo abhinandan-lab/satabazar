@@ -2,249 +2,73 @@
 
 <?=$this->section("content")?>
 
-    <div class="container">
-        <h1 class="logo">sata bazar</h1>
+<div class="container">
+    <h1 class="logo">sata bazar</h1>
 
 
-        <button type="button"> Goto Bottom</button>
+    <button type="button"> Goto Bottom</button>
 
-        <div class="panel">
-            <h1>Madhuri panel chart</h1>
-            <table>
-                <thead>
-                    <tr>
+    <div class="panel">
+        <h1>Madhuri panel chart</h1>
+        <table>
+            <thead>
+                <tr>
 
-                        <th colspan="">date</th>
-                        <th colspan="3">mon</th>
-                        <th colspan="3">tue</th>
-                        <th colspan="3">wed</th>
-                        <th colspan="3">thu</th>
-                        <th colspan="3">fri</th>
-                        <th colspan="3">sat</th>
-                        <th colspan="3">sun</th>
-                    </tr>
-                    </tr>
-                </thead>
-                <tbody>
+                    <th colspan="">date</th>
+                    <th colspan="3">mon</th>
+                    <th colspan="3">tue</th>
+                    <th colspan="3">wed</th>
+                    <th colspan="3">thu</th>
+                    <th colspan="3">fri</th>
+                    <th colspan="3">sat</th>
+                    <th colspan="3">sun</th>
+                </tr>
+                </tr>
+            </thead>
+            <tbody>
 
 
-                    <?php
+                <?php
 
-                echo '<pre>';
-                // print_r($rows);
-                // echo '</pre>';
 
+                $arrayData = getPanelArrayData($rows);
 
-                $arrayData = [];
 
-                $rowData = [];
-                $rowWeekData = [];
-
-
-
-                // for ($index=0; $index < count($rows) ; $index++) {
-                    for ($index=0; $index < 2 ; $index++) { 
-
-                    
-                    $monday = findPreviouMonDate($rows[$index]['created_at'], true);
-                    $sunday = findNextSunDate($rows[$index]['created_at'], true);
-
-                    $currentDay = findCurrentDay($rows[$index]['created_at']);
-                    $currentDate = substr($rows[$index]['created_at'], 0, 10);
-
-                    // echo '<h1>'. $currentDate . '</h1>';
-
-                    // dates without format change
-                    $m = findPreviouMonDate($rows[$index]['created_at']);
-                    $s = findNextSunDate($rows[$index]['created_at']);
-
-
-
-
-
-                    if($index != 0) {
-                        $prevSun =  findNextSunDate($rows[$index - 1]['created_at']);  
-                        
-                        if($currentDate > $prevSun) {
-                            // create new row
-
-                            array_push($rowData, ['rowDatta' => $m ,$s] );
-
-                            echo '<pre>';
-                            // print_r($rowData);
-
-                            // array_push($row1);
-
-                            // echo '<h1> create New ROw'. $index . '</h1>';
-                            echo "<tr>  <td> $monday <br> to <br> $sunday </td>";
-                        }
-
-                        }
-                        else {
-
-                            array_push($rowData, ['rowDatta' => $m ,$s] );
-
-                            echo '<pre>';
-                            // print_r($rowData);
-
-                            // at index 0
-                            echo "<tr>  <td> $monday <br> to <br> $sunday </td>";
-
-                        }
-
-
-
-
-
-
-                    // echo 'monday = '.$monday;
-                    // echo '<br>';
-                    // echo 'sunday = '.$sunday;
-                    
-                    // echo '<br>';
-                    // echo '<br>';
-                    // echo '<br>';
-                    // // $m = new DateTime($monday);
-                    // // echo $m;
-
-                    // $m = findPreviouMonDate('2000-01-22');
-                    // $s = findNextSunDate('1999-12-05');
-
-                    // echo 'monday = '.$m;
-                    // echo '<br>';
-                    // echo 'sunday = '.$s;
-                    // echo '<br>';
-                    // if ( $m > $s ) {
-                    //     echo 'monday is gretaer';
-                    // }
-                    // else {
-                    //     echo 'sunday is greater';
-                    // }
-
-
-
-
-
-
-
-
-                    
-                    $n = $rows[$index]['satta_number'];
-
-                    $tdstar = ' <td class="nb" >
-                    *<br>
-                    *<br>
-                    *<br>
-                    </td>
-                    <td>**</td>
-                    <td class="nb">
-                        *<br>
-                        *<br>
-                        *<br>
-                    </td> ' ;
-    
-                    $tdnumber =  ' <td class="nb" >
-                    '. substr($n, 0, 1) . ' <br>
-                    '. substr($n, 1, 1) . ' <br>
-                    '. substr($n, 2, 1) . ' <br>
-                    </td>
-                    <td> '. substr($n, 3, 2) . '</td>
-                    <td class="nb">
-                    '. substr($n, 5, 1) . ' <br>
-                    '. substr($n, 6, 1) . ' <br>
-                    '. substr($n, 7, 1) . ' <br>
-                    </td> ' ;
-                    
-                    // echo '<h1>'. $n . '</h1>';
-                    // echo '<h1>'. $currentDay . '</h1>';
-                    // echo '<h1>'. $monday . ' to '. $sunday . '</h1>';
-                    // echo '<h1>'. $sunday . '</h1>';
-                    
-                    // echo "<tr>  <td> $monday <br> to <br> $sunday </td>";
-                    
- 
-                    
-
-
-                    for ($i=0; $i <= 6 ; $i++) { 
-
-                        if($i == 0 && $currentDay == 'Mon' ){
-                            echo $tdnumber;
-                            array_push($rowWeekData, $tdnumber);
-                            continue;
-                        }
-
-                        if($i == 1 && $currentDay == 'Tue') {
-                            echo $tdnumber;
-                            array_push($rowWeekData, $tdnumber);
-                            continue;
-                        }
-
-                        if($i == 2 && $currentDay == 'Wed') {
-                            echo $tdnumber;
-                            array_push($rowWeekData, $tdnumber);
-                            continue;
-                        }
-
-
-                        if($i == 3 && $currentDay == 'Thu') {
-                            echo $tdnumber;
-                            array_push($rowWeekData, $tdnumber);
-                            continue;
-                        }
-
-
-                        if($i == 4 && $currentDay == 'Fri') {
-                            echo $tdnumber;
-                            array_push($rowWeekData, $tdnumber);
-                            continue;
-                        }
-
-
-                        if($i == 5 && $currentDay == 'Sat') {
-                            echo $tdnumber;
-                            array_push($rowWeekData, $tdnumber);
-                            continue;
-                        }
-
-
-                        if($i == 6 && $currentDay == 'Sun') {
-                            echo $tdnumber;
-                            array_push($rowWeekData, $tdnumber);
-                            continue;
-                        }
-
-
-                        else {
-
-                            echo $tdstar;
-                            array_push($rowWeekData, $tdstar);
-                        }
-
-                    }
-
-                    // echo '</tr>';
-
-                    array_push($rowData, ['rowweekData' => $rowWeekData ]);
-
-                    array_push($arrayData, ['rowData' => $rowData]);
-                    echo '<hr> <pre>';
-                    print_r($arrayData);
-
-
-                }
-                
-                
-                
+                // ===========================================================================
                 ?>
 
 
-                </tbody>
-            </table>
-        </div>
 
+                <?php foreach($arrayData as $tableRow) { ?>
+                    <tr>
+                    <td> <?= changeFormat($tableRow[0]) ?> <br> to <br><?= changeFormat($tableRow[1]) ?> </td>
 
+                    <?php foreach($tableRow[2] as $cell) { ?>
+
+                        <td class="nb">
+                        <?= substr($cell, 0, 1) ?> <br>
+                        <?= substr($cell, 1, 1) ?><br>
+                        <?= substr($cell, 2, 1) ?><br>
+                        </td>
+                        <td><?= substr($cell, 3, 2) ?></td>
+                        <td class="nb">
+                        <?= substr($cell, 5, 1) ?><br>
+                        <?= substr($cell, 6, 1) ?><br>
+                        <?= substr($cell, 7, 1) ?><br>
+                        </td>
+
+                  <?php  } ?>
+
+                    </td>
+
+                <?php } ?>
+
+            </tbody>
+        </table>
     </div>
+
+
+</div>
 
 </body>
 
