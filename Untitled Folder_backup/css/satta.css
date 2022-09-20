@@ -23,92 +23,18 @@ body {
   border-radius: 15px;
 }
 
-.italic {
-  font-style: italic;
-}
-
-.my1 {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-.blue-btn {
-  padding: 6px 10px;
-  text-align: center;
-  color: white;
-  background-color: #00199F;
-  font-weight: normal;
-  cursor: pointer;
-  border: none;
-  transition: all 0.3s;
-  border-radius: 8px;
-  font-family: "Courier New", Courier, monospace;
-}
-
-.blue-btn:hover {
-  font-weight: bold;
-}
-
-.pink-btn {
-  background-color: #FF00A2;
-  color: white;
-  padding: 5px 12px;
-  border: 1px solid;
-  text-decoration: none;
-  border: 2px solid transparent;
-  font-weight: bold;
-  font-size: 1em;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.pink-btn:hover {
-  border: 2px solid white;
-  box-shadow: 2px 2px 4px #6D1137;
-}
-
-.red-btn {
-  background-color: #ff0016;
-  border: 2px solid transparent;
-  padding: 5px 10px;
-  font-size: 1em;
-  box-shadow: 1px 1px 2px black;
-  font-weight: bold;
-  border-radius: 6px;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.red-btn:hover {
-  border: 2px solid white;
-}
-
-.green-btn {
-  background-color: green;
-  border: 2px solid transparent;
-  padding: 5px 10px;
-  font-size: 1em;
-  box-shadow: 1px 1px 2px black;
-  font-weight: normal;
-  border-radius: 6px;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.green-btn:hover {
-  border: 2px solid white;
-}
-
-.pink-head {
-  border: 3px solid white;
-  border-radius: 15px;
-  background-color: #FF00A2;
-  color: white;
-  text-align: center;
-  padding: 10px 15px;
-}
-
 .nb {
   border-right: none;
+}
+
+button, a {
+  padding: 10px 15px;
+  margin: 15px;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  background-color: #00199F;
+  cursor: pointer;
 }
 
 .sattalist {
@@ -122,6 +48,24 @@ body {
   margin-top: 2em;
   margin-bottom: 2em;
   text-align: center;
+}
+.sattalist .confirm-div a {
+  border: none;
+  font-weight: normal;
+  padding: 8px 10px;
+  font-size: 1.2em;
+  box-shadow: 1px 1px 2px black;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+}
+.sattalist .confirm-div a:hover {
+  font-weight: bold;
+}
+.sattalist .confirm-div a:nth-of-type(1) {
+  background-color: green;
+}
+.sattalist .confirm-div a:nth-of-type(2) {
+  background-color: #ff0016;
 }
 .sattalist .confirm-heading {
   text-align: center;
@@ -223,7 +167,21 @@ body {
   text-align: center;
 }
 .sattalist .admin .controls a {
+  border: none;
+  font-weight: normal;
+  padding: 5px 10px;
+  font-size: 1em;
+  box-shadow: 1px 1px 2px black;
   margin-top: 10px;
+}
+.sattalist .admin .controls a:hover {
+  font-weight: bold;
+}
+.sattalist .admin .controls a:nth-of-type(1) {
+  background-color: #ff0016;
+}
+.sattalist .admin .controls a:nth-of-type(2) {
+  background-color: green;
 }
 .sattalist .item {
   display: flex;
@@ -317,6 +275,19 @@ body {
 .sattalist .action {
   padding: 1em;
 }
+.sattalist .action a {
+  background-color: #FF00A2;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+}
+.sattalist .action a:hover {
+  border: 2px solid white;
+  box-shadow: 2px 2px 4px #6D1137;
+}
 .sattalist .create {
   display: block;
   text-align: center;
@@ -350,7 +321,31 @@ body {
   margin-top: 15px;
 }
 .sattalist .create .controls a {
+  background-color: #ff0016;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
   font-size: 1em;
+}
+.sattalist .create .controls a:hover {
+  border: 2px solid white;
+}
+.sattalist .create .controls input {
+  background-color: #FF00A2;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  font-size: 1em;
+}
+.sattalist .create .controls input:hover {
+  border: 2px solid white;
+  box-shadow: 2px 2px 4px #6D1137;
 }
 
 .panel h1 {

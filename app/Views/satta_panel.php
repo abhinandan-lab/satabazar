@@ -6,7 +6,7 @@
     <h1 class="logo">sata bazar</h1>
 
 
-    <button type="button"> Goto Bottom</button>
+    <button type="button" class="blue-btn my1"> Goto Bottom</button>
 
     <div class="panel">
         <h1>Madhuri panel chart</h1>

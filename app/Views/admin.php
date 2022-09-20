@@ -22,7 +22,7 @@
 
 
             <div class="action">
-                <a href="<?= base_url();?>/create">Create satta</a>
+                <a class="pink-btn" href="<?= base_url();?>/create">Create satta</a>
             </div>
 
             <?php foreach($list as $row) {  ?>
@@ -38,8 +38,8 @@
                         <?= date('h:i A', strtotime($row['end_time'])) ?></p>
 
                     <div class="controls">
-                        <a href="confirm-delete/<?= $row['id'] ?>">Delete</a>
-                        <a href="satta-edit/<?= $row['id'] ?>">Edit</a>
+                        <a class="red-btn" href="confirm-delete/<?= $row['id'] ?>">Delete</a>
+                        <a class="green-btn" href="satta-edit/<?= $row['id'] ?>">Edit</a>
                     </div>
                 </div>
                 <a href="satta-panel/<?= $row['id'] ?>" target="_blank">Panel</a>
