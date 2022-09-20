@@ -60,6 +60,7 @@ $routes->group('', ['filter'=> 'isAdminLoggedin'], function($routes){
     $routes->get('satta-edit/(:num)', 'Home::adminSattaEdit/$1');
     $routes->post('satta-edit', 'Home::adminSattaEdit');   
 
+    $routes->get('confirm-delete/(:num)', 'Home::adminSattaDeleteConfirmation/$1');
     $routes->get('satta-delete/(:num)', 'Home::adminSattaDelete/$1');
 });
 

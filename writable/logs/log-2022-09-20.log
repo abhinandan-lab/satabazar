@@ -1,0 +1,33 @@
+CRITICAL - 2022-09-20 11:54:47 --> Undefined variable $session
+in APPPATH\Views\admin.php on line 25.
+ 1 APPPATH\Views\admin.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\admin.php', 25)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('admin', [], true)
+ 5 APPPATH\Controllers\Home.php(87): view('admin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-20 11:54:48 --> Undefined variable $session
+in APPPATH\Views\admin.php on line 25.
+ 1 APPPATH\Views\admin.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\admin.php', 25)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('admin', [], true)
+ 5 APPPATH\Controllers\Home.php(87): view('admin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-20 11:59:52 --> Undefined variable $id
+in APPPATH\Views\confirmation.php on line 22.
+ 1 APPPATH\Views\confirmation.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Views\\confirmation.php', 22)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\confirmation.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('confirmation', [], true)
+ 5 APPPATH\Controllers\Home.php(274): view('confirmation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminSattaDeleteConfirmation('3')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

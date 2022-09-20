@@ -12,6 +12,8 @@
 
             <?php
 
+            $session = session();
+
             if( isset($_SESSION['success'])) {
                 echo '<p>'. $_SESSION['success'] .'</p>';
             }
@@ -36,7 +38,7 @@
                         <?= date('h:i A', strtotime($row['end_time'])) ?></p>
 
                     <div class="controls">
-                        <a href="satta-delete/<?= $row['id'] ?>">Delete</a>
+                        <a href="confirm-delete/<?= $row['id'] ?>">Delete</a>
                         <a href="satta-edit/<?= $row['id'] ?>">Edit</a>
                     </div>
                 </div>

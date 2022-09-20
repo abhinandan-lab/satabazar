@@ -264,6 +264,16 @@ class Home extends BaseController
         }
     }
 
+    public function adminSattaDeleteConfirmation($id =null) {
+
+        $session = \Config\Services::session();
+
+        $satamodel = new SattaModel();
+        $row = $satamodel->find($id);
+
+        return view('confirmation', ['row' => $row ]);
+    }
+
 
     public function sattaPanel($id = null) {
         // echo $id;
