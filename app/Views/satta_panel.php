@@ -9,7 +9,7 @@
     <button type="button" class="blue-btn my1"> Goto Bottom</button>
 
     <div class="panel">
-        <h1>Madhuri panel chart</h1>
+        <h1 class="pink-head">Madhuri panel chart</h1>
         <table>
             <thead>
                 <tr>
@@ -41,7 +41,7 @@
 
                 <?php foreach($arrayData as $tableRow) { ?>
                     <tr>
-                    <td> <?= changeFormat($tableRow[0]) ?> <br> to <br><?= changeFormat($tableRow[1]) ?> </td>
+                    <td class="dt"> <?= changeFormat($tableRow[0]) ?> <br> to <br><?= changeFormat($tableRow[1]) ?> </td>
 
                     <?php foreach($tableRow[2] as $cell) { ?>
 
@@ -50,7 +50,7 @@
                         <?= substr($cell, 1, 1) ?><br>
                         <?= substr($cell, 2, 1) ?><br>
                         </td>
-                        <td><?= substr($cell, 3, 2) ?></td>
+                        <td class="mid"><?= substr($cell, 3, 2) ?></td>
                         <td class="nb">
                         <?= substr($cell, 5, 1) ?><br>
                         <?= substr($cell, 6, 1) ?><br>

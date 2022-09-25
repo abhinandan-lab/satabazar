@@ -8,7 +8,7 @@
         <h1 class="logo">sata bazar</h1>
 
         <div class="sattalist">
-            <h2>LIVE RESULT</h2>
+            <h2 class="pink-head">LIVE RESULT</h2>
 
             <?php
 
@@ -28,7 +28,7 @@
             <?php foreach($list as $row) {  ?>
 
             <div class="item admin">
-                <a href="jodi/ <?= $row['id'] ?>" targer="_blank">Jodi</a>
+                <a class="blue-btn" href="<?= base_url() ?>/ jodi/ <?= $row['id'] ?>" targer="_blank">Jodi</a>
                 <div class="info">
 
                     <h3><?=  $row['name'] ?></h3>
@@ -42,7 +42,7 @@
                         <a class="green-btn" href="satta-edit/<?= $row['id'] ?>">Edit</a>
                     </div>
                 </div>
-                <a href="satta-panel/<?= $row['id'] ?>" target="_blank">Panel</a>
+                <a class="blue-btn" href="satta-panel/<?= $row['id'] ?>" target="_blank">Panel</a>
             </div>
 
             <?php } ?>

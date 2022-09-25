@@ -21,7 +21,7 @@ $session = \Config\Services::session();
                 }
             
             ?>
-            <h2>Edit List</h2>
+            <h2 class="pink-head italic">Edit List</h2>
 
 
             <div class="action">
@@ -70,9 +70,9 @@ $session = \Config\Services::session();
                     </div>
                     <div class="controls">
 
-                        <a href="<?= base_url(); ?>/admin">Go Back</a>
+                        <a class="green-btn" href="<?= base_url(); ?>/admin">Go Back</a>
 
-                        <input type="submit" value="Save Update">
+                        <input class="pink-btn" type="submit" value="Save Update">
 
                     </div>
                     <?= form_close(); ?>

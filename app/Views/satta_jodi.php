@@ -9,7 +9,7 @@
         <button type="button" class="blue-btn my1"> Goto Bottom</button>
 
         <div class="panel">
-            <h1>Madhuri Jodi chart</h1>
+            <h1 class="pink-head">Madhuri Jodi chart</h1>
             <table >
                 <thead>
                     <tr>

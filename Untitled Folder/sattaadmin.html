@@ -17,14 +17,14 @@
         <h1 class="logo">sata bazar</h1>
 
         <div class="sattalist">
-            <h2>LIVE RESULT</h2>
+            <h2 class="pink-head">LIVE RESULT</h2>
 
 
             <div class="action">
-                <button>Create sata</button>
+                <button class="pink-btn">Create sata</button>
             </div>
             <div class="item admin">
-                <a href="#">Jodi</a>
+                <a class="blue-btn" href="#">Jodi</a>
                 <div class="info">
                     <h3>Madhuri night</h3>
                     <p>143-44-567</p>
@@ -32,15 +32,15 @@
                     
 
                     <div class="controls">
-                        <a href="#">Delete</a>
-                        <a href="#">Edit</a>
+                        <a class="red-btn" href="#">Delete</a>
+                        <a class="green-btn" href="#">Edit</a>
                     </div>
                 </div>
-                <a href="#">Panel</a>
+                <a class="blue-btn" href="#">Panel</a>
             </div>
 
             <div class="item admin">
-                <button type="button">Jodi</button>
+                <a class="blue-btn" href="#">Jodi</a>
                 <div class="info">
                     <h3>Madhuri night</h3>
                     <p>143-44-567</p>
@@ -48,15 +48,15 @@
                     
 
                     <div class="controls">
-                        <a href="#">Delete</a>
-                        <a href="#">Edit</a>
+                        <a class="red-btn" href="#">Delete</a>
+                        <a class="green-btn" href="#">Edit</a>
                     </div>
                 </div>
-                <button type="button">Panel</button>
+                <a class="blue-btn" href="#">Panel</a>
             </div>
 
             <div class="item admin">
-                <button type="button">Jodi</button>
+                <a class="blue-btn" href="#">Jodi</a>
                 <div class="info">
                     <h3>Madhuri night</h3>
                     <p>143-44-567</p>
@@ -64,49 +64,34 @@
                     
 
                     <div class="controls">
-                        <a href="#">Delete</a>
-                        <a href="#">Edit</a>
+                        <a class="red-btn" href="#">Delete</a>
+                        <a class="green-btn" href="#">Edit</a>
                     </div>
                 </div>
-                <button type="button">Panel</button>
+                <a class="blue-btn" href="#">Panel</a>
             </div>
+
+            <div class="item admin">
+                <a class="blue-btn" href="#">Jodi</a>
+                <div class="info">
+                    <h3>Madhuri night</h3>
+                    <p>143-44-567</p>
+                    <p>11:15 pm &nbsp; &nbsp; 12:12 am</p>
+                    
+
+                    <div class="controls">
+                        <a class="red-btn" href="#">Delete</a>
+                        <a class="green-btn" href="#">Edit</a>
+                    </div>
+                </div>
+                <a class="blue-btn" href="#">Panel</a>
+            </div>
+
 
 
 
 
         </div>
-
-
-
-        <script>
-            var times = {}, re = /^\d+(?=:)/;
-
-            for (var i = 13, n = 1; i < 24; i++, n++) {
-                times[i] = n < 10 ? "0" + n : n
-            }
-
-            document.getElementById("end-time")
-                .onchange = function () {
-                    var time = this
-                        , value = time.value
-                        , match = value.match(re)[0];
-                    this.nextElementSibling.innerHTML =
-                        (match && match >= 13 ? value.replace(re, times[match]) : value)
-                        + (time.valueAsDate.getTime() < 43200000 ? " AM" : " PM")
-                }
-
-
-            document.getElementById("start-time")
-                .onchange = function () {
-                    var time = this
-                        , value = time.value
-                        , match = value.match(re)[0];
-                    this.nextElementSibling.innerHTML =
-                        (match && match >= 13 ? value.replace(re, times[match]) : value)
-                        + (time.valueAsDate.getTime() < 43200000 ? " AM" : " PM")
-                }
-        </script>
-
 
 
 

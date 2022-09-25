@@ -14,7 +14,7 @@ $session = \Config\Services::session();
         <h1 class="logo">sata bazar</h1>
 
         <div class="sattalist">
-            <h2>Admin Login</h2>
+            <h2 class="pink-head italic">Admin Login</h2>
 
 
             <div class="login">
@@ -52,7 +52,7 @@ $session = \Config\Services::session();
 
                 <div class="link">
 
-                    <!-- <a href="#">forgot password?</a> -->
+                    <a href="#">forgot password?</a>
                 </div>
 
 

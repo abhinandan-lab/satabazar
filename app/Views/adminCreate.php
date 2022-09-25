@@ -21,7 +21,7 @@ $session = \Config\Services::session();
                 }
             
             ?>
-            <h2>Create New List</h2>
+            <h2 class="pink-head italic">Create New List</h2>
 
 
             <div class="action">
@@ -66,9 +66,9 @@ $session = \Config\Services::session();
                     </div>
                     <div class="controls">
 
-                        <a href="<?= base_url(); ?>/admin">Go Back</a>
+                        <a class="green-btn" href="<?= base_url(); ?>/admin">Go Back</a>
 
-                        <input type="submit" value="Create">
+                        <input class="pink-btn" type="submit" value="Create">
 
                     </div>
                     <?= form_close(); ?>

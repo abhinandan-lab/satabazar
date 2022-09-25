@@ -15,6 +15,12 @@ body {
   margin: 10px;
 }
 
+.my1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 1.4em;
+}
+
 .logo {
   text-align: center;
   font-size: 3em;
@@ -27,38 +33,92 @@ body {
   font-style: italic;
 }
 
-.my1 {
-  margin-top: 1em;
-  margin-bottom: 1em;
+.pink-head {
+  background-color: #FF00A2;
+  padding: 0.3333333333em;
+  color: white;
+  text-align: center;
+  border: 3px solid white;
+  font-size: 1.6666666667em;
+  border-radius: 15px;
 }
 
 .blue-btn {
-  padding: 6px 10px;
-  text-align: center;
-  color: white;
   background-color: #00199F;
-  font-weight: normal;
-  cursor: pointer;
-  border: none;
-  transition: all 0.3s;
-  border-radius: 8px;
+  color: white;
+  text-transform: capitalize;
+  padding: 4px 8px;
+  border-radius: 0.5em;
   font-family: "Courier New", Courier, monospace;
+  transition: all ease-in 0.15s;
+  border: transparent;
 }
 
 .blue-btn:hover {
+  box-shadow: 1px 1px 4px black;
   font-weight: bold;
+}
+
+.special-blue-btn {
+  background-color: #00199F;
+  display: inline-block;
+  padding-left: 2em;
+  padding-right: 2em;
+  color: white;
+  cursor: pointer;
+  transition: all ease-in 0.15s;
+  border: 2px solid transparent;
+  margin: auto;
+  padding: 0.3em 2em;
+}
+
+.special-blue-btn:hover {
+  background-color: #FFCC99;
+  border: 2px solid #00199F;
+  color: #00199F;
+}
+
+.green-btn {
+  border: 2px solid transparent;
+  font-weight: normal;
+  padding: 0.25em 0.4em;
+  color: white;
+  box-shadow: 1px 1px 2px black;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: green;
+  border-radius: 3px;
+  transition: all ease-in 0.15s;
+}
+
+.green-btn:hover {
+  border: 2px solid white;
+}
+
+.red-btn {
+  border: 2px solid transparent;
+  font-weight: normal;
+  padding: 0.25em 0.4em;
+  color: white;
+  box-shadow: 1px 1px 2px black;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ff0016;
+  border-radius: 3px;
+  transition: all ease-in 0.15s;
+}
+
+.red-btn:hover {
+  border: 2px solid white;
 }
 
 .pink-btn {
   background-color: #FF00A2;
   color: white;
-  padding: 5px 12px;
-  border: 1px solid;
+  padding: 0.45em 0.7em;
   text-decoration: none;
   border: 2px solid transparent;
   font-weight: bold;
-  font-size: 1em;
-  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 0.1em;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.262);
 }
 
 .pink-btn:hover {
@@ -66,88 +126,81 @@ body {
   box-shadow: 2px 2px 4px #6D1137;
 }
 
-.red-btn {
-  background-color: #ff0016;
-  border: 2px solid transparent;
-  padding: 5px 10px;
-  font-size: 1em;
-  box-shadow: 1px 1px 2px black;
-  font-weight: bold;
-  border-radius: 6px;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.red-btn:hover {
-  border: 2px solid white;
-}
-
-.green-btn {
-  background-color: green;
-  border: 2px solid transparent;
-  padding: 5px 10px;
-  font-size: 1em;
-  box-shadow: 1px 1px 2px black;
-  font-weight: normal;
-  border-radius: 6px;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.green-btn:hover {
-  border: 2px solid white;
-}
-
-.pink-head {
-  border: 3px solid white;
-  border-radius: 15px;
-  background-color: #FF00A2;
-  color: white;
-  text-align: center;
-  padding: 10px 15px;
-}
-
-.nb {
-  border-right: none;
-}
-
 .sattalist {
   margin-top: 1em;
   border: 3px solid #FF00A2;
   border-radius: 15px;
 }
-.sattalist .confirm-div {
-  display: block;
-  padding: 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  text-align: center;
-}
 .sattalist .confirm-heading {
-  text-align: center;
-  font-size: 1.6em;
+  font-size: 1.45em;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 15px;
+  text-align: center;
+  font-weight: normal;
+  color: #6D1137;
+  margin-top: 1em;
 }
 .sattalist .confirm-heading span {
+  font-weight: bold;
   color: #00199F;
-  text-decoration: underline;
+}
+.sattalist .confirm-div {
+  display: flex;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  justify-content: center;
+  align-items: center;
+}
+.sattalist .errors {
+  background-color: #ff0016;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 5px;
+}
+.sattalist .errors p,
+.sattalist .errors li {
+  color: white;
+  font-size: 0.9em;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: capitalize;
+}
+.sattalist .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #FF00A2;
+  text-align: center;
+}
+.sattalist .item a {
+  font-size: 0.8em;
+}
+.sattalist .item .info h3 {
+  color: #00199F;
+  font-weight: bold;
+  font-size: 1.65em;
+  text-align: center;
   text-transform: uppercase;
 }
-.sattalist .item.admin a {
-  padding: 4px 8px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 0.9em;
+.sattalist .item .info p {
+  margin-top: 0.25em;
 }
-.sattalist h2 {
+.sattalist .item .info p:nth-of-type(1) {
+  color: #6D1137;
+  font-size: 1.45em;
+  font-weight: bold;
   text-align: center;
-  background-color: #FF00A2;
-  padding: 0.3em;
-  border: 3px solid white;
-  color: white;
-  border-radius: 15px;
-  font-style: italic;
+}
+.sattalist .item .info p:nth-of-type(2) {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1em;
 }
 .sattalist .login {
   margin: 30px auto 30px;
@@ -158,9 +211,41 @@ body {
 .sattalist .login .mb {
   margin-bottom: 1em;
 }
-.sattalist .login .submit, .sattalist .login .link {
+.sattalist .login .submit,
+.sattalist .login .link {
   display: block;
   text-align: center;
+}
+.sattalist .login label {
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.sattalist .login input {
+  display: block;
+  padding: 0.25em;
+  font-size: 1.2em;
+  width: 100%;
+  background-color: #FFCC99;
+  border: 2px solid #00199F;
+  outline: none;
+}
+.sattalist .login input[type=submit] {
+  background-color: #00199F;
+  width: unset;
+  display: inline-block;
+  padding-left: 2em;
+  padding-right: 2em;
+  color: white;
+  cursor: pointer;
+  transition: all ease-in 0.15s;
+  border: 2px solid transparent;
+  margin: auto;
+  padding: 0.3em 2em;
+}
+.sattalist .login input[type=submit]:hover {
+  background-color: #FFCC99;
+  border: 2px solid #00199F;
+  color: #00199F;
 }
 .sattalist .login .link a {
   color: #6D1137;
@@ -171,203 +256,180 @@ body {
 .sattalist .login .link a:hover {
   color: #00199F;
 }
-.sattalist .login .form-control label {
-  margin-bottom: 4px;
-  font-weight: 500;
+.sattalist .action {
+  padding: 1em;
 }
-.sattalist .login .form-control input {
+.sattalist .action .pink-btn {
+  font-size: 0.95em;
+}
+.sattalist .item.admin .controls {
+  text-transform: capitalize;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+.sattalist .admin.create {
   display: block;
-  padding: 0.25em;
+  text-align: center;
+}
+.sattalist .admin.create .errors p,
+.sattalist .admin.create .errors li {
+  font-size: 1em;
+  color: white;
+  font-weight: normal;
+  margin: 0.05em auto;
+  text-transform: capitalize;
+}
+.sattalist .admin.create .info h3 input {
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  padding: 0.1em;
   font-size: 1.2em;
   width: 100%;
   background-color: #FFCC99;
-  border: 2px solid #00199F;
+  border: 1px solid white;
   outline: none;
 }
-.sattalist .login .form-control input[type=submit] {
-  background-color: #00199F;
-  width: unset;
-  display: inline-block;
-  padding-left: 2em;
-  padding-right: 2em;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s;
-  border: 2px solid transparent;
-  margin: auto;
-}
-.sattalist .login .form-control input[type=submit]:hover {
-  background-color: #FFCC99;
-  border: 2px solid #00199F;
-  color: #00199F;
-}
-.sattalist .login .errors {
-  background-color: #ff0016;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  padding: 5px;
-}
-.sattalist .login .errors p, .sattalist .login .errors li {
-  color: white;
-  font-size: 0.9sem;
-  font-weight: normal;
-  font-style: normal;
-  text-transform: capitalize;
-}
-.sattalist .admin a {
-  padding: 3px 8px;
-  border-radius: 10px;
-}
-.sattalist .admin .controls {
-  text-align: center;
-}
-.sattalist .admin .controls a {
-  margin-top: 10px;
-}
-.sattalist .item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em;
-  border-bottom: 1px solid #FF00A2;
-}
-.sattalist .item a {
-  background-color: #00199F;
-  color: white;
-  padding: 2px 5px;
-  font-size: 14px;
-  border-radius: 8px;
-  font-weight: bold;
-}
-.sattalist .item h3 {
-  color: #00199F;
-  font-weight: bold;
-  font-size: 1.5em;
-  text-align: center;
-  text-transform: uppercase;
-}
-.sattalist .item p:nth-of-type(1) {
-  color: #6D1137;
-  font-size: 1.5em;
-  font-weight: bold;
-  text-align: center;
-}
-.sattalist .item p:nth-of-type(2) {
-  font-weight: 600;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  font-size: 0.96em;
-}
-.sattalist .item input {
-  background-color: #FFCC99;
-  border: 1px solid transparent;
-  font-size: 1.3em;
-  text-align: center;
-  display: inline;
-  font-weight: bold;
-}
-.sattalist .item .info h3 input {
-  border: 1px solid white;
-}
-.sattalist .item .info .time {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 0.5em;
-}
-.sattalist .item .info .time div {
-  border: 1px solid white;
-  padding: 2px;
-}
-.sattalist .item .info .time input {
-  font-weight: normal;
-  font-size: 1.4em;
-  box-shadow: 2px 2px 4px #FF9A34;
-  font-weight: bold;
-}
-.sattalist .item .info .time label {
-  text-transform: capitalize;
-}
-.sattalist .item .number {
+.sattalist .admin.create .info .number {
   display: flex;
   margin-top: 0.5em;
   justify-content: center;
   gap: 1px;
 }
-.sattalist .item .number div {
-  border: 2px solid gold;
+.sattalist .admin.create .info .number div {
   display: flex;
   border: 1px solid white;
   align-items: center;
+}
+.sattalist .admin.create .info .number div input {
+  background-color: #FFCC99;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
   padding: 0;
 }
-.sattalist .item .number div p {
-  padding: 0;
-}
-.sattalist .item .number input {
+.sattalist .admin.create .info .number input {
   color: #6D1137;
   font-size: 1.4em;
   width: 4ch;
 }
-.sattalist .item .number .ch1 {
+.sattalist .admin.create .info .number .ch1 {
   width: 2ch;
 }
-.sattalist .action {
-  padding: 1em;
-}
-.sattalist .create {
-  display: block;
-  text-align: center;
-}
-.sattalist .create .errors {
-  background-color: #ff0016;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border-radius: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-.sattalist .create .errors p, .sattalist .create .errors li {
-  color: white;
-  font-size: 1em;
-  font-weight: normal;
-  font-style: normal;
-  text-transform: capitalize;
-}
-.sattalist .create .time {
+.sattalist .admin.create .info .time {
   display: flex;
   -moz-column-gap: 1em;
        column-gap: 1em;
   max-width: 600px;
   margin: auto;
+  justify-content: center;
+  align-items: center;
 }
-.sattalist .create .time input {
-  font-size: 1.3em;
+.sattalist .admin.create .info .time div {
+  margin-top: 0.6em;
+  border: 1px solid white;
+  padding: 3px;
 }
-.sattalist .create .controls {
-  margin-top: 15px;
+.sattalist .admin.create .info .time div label {
+  text-transform: capitalize;
+  font-size: 0.85em;
+  color: #6D1137;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.sattalist .create .controls a {
+.sattalist .admin.create .info .time div input {
+  background-color: #FFCC99;
+  box-shadow: 2px 2px 4px #FF9A34;
+  font-weight: bold;
+  border: none;
+  font-size: 1.35em;
+}
+.sattalist .admin.create .info .controls {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.sattalist .admin.create .info .controls a, .sattalist .admin.create .info .controls input {
+  padding: 0.28em 1em;
   font-size: 1em;
+  border-radius: 0px;
 }
 
-.panel h1 {
-  text-align: center;
-  background-color: #FF00A2;
-  color: white;
-  padding: 0.3em;
-  border-radius: 15px;
-  border: 3px solid white;
+.panel {
+  margin-top: 1em;
+}
+.panel .pink-head {
+  margin-bottom: 0.5em;
+}
+.panel th {
+  background-color: rgba(255, 154, 52, 0.4705882353);
+  padding: 0.4em;
+  text-transform: capitalize;
+  color: #00199F;
 }
 .panel table {
+  border-collapse: collapse;
   width: 100%;
   text-align: center;
-  margin-top: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.panel table, .panel th, .panel td {
-  border: 1px solid rgba(0, 0, 0, 0.332);
+.panel td,
+.panel th {
+  border: 1px solid #ff00a2;
+}
+.panel tbody tr td:nth-child(3n) {
+  border-left: none;
+  border-right: none;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.panel tbody tr td:nth-child(3n+2) {
+  border-right: none;
+  padding-left: 4px;
+}
+.panel tbody tr td:nth-child(3n+4) {
+  border-left: none;
+  padding-right: 4px;
+}
+.panel table .nb {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.panel table .mid {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.panel table .dt {
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.jodi {
+  margin-top: 1em;
+  border-radius: 15px;
+}
+.jodi .pink-head {
+  margin-bottom: 0.5em;
+}
+.jodi th {
+  background-color: rgba(255, 154, 52, 0.4705882353);
+  padding: 0.4em;
+  text-transform: capitalize;
+  color: #00199F;
+}
+.jodi table {
   border-collapse: collapse;
-  padding: 5px;
+  width: 100%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.jodi td, .jodi th {
+  border: 1px solid #FF00A2;
+}
+.jodi td {
+  padding: 10px;
+  font-weight: bold;
 }/*# sourceMappingURL=satta.css.map */

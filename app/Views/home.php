@@ -13,12 +13,12 @@
         <h1 class="logo">sata bazar</h1>
 
         <div class="sattalist">
-            <h2>LIVE RESULT</h2>
+            <h2 class="pink-head italic">LIVE RESULT</h2>
 
             <?php foreach($list as $row) { ?>
 
                 <div class="item">
-                <a href="satta-jodi/<?= $row['id'] ?>" target="_blank">Jodi</a>
+                <a class="blue-btn" href="satta-jodi/<?= $row['id'] ?>" target="_blank">Jodi</a>
           
                 <div class="info">
                     <h3><?=  $row['name'] ?></h3>
@@ -26,7 +26,7 @@
                     <p><?= date('h:i A', strtotime($row['start_time'])) ?> &nbsp; &nbsp; <?= date('h:i A', strtotime($row['end_time'])) ?></p>
                 </div>
              
-                <a href="satta-panel/<?= $row['id'] ?>" target="_blank">Panel</a>
+                <a class="blue-btn" href="satta-panel/<?= $row['id'] ?>" target="_blank">Panel</a>
 
             </div>
 
