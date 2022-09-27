@@ -42,7 +42,7 @@ $session = \Config\Services::session();
                 <div class="form-control mb">
 
                     <label for="password">Enter Password</label> <br>
-                    <input <?= set_value('password') ?> requireds type="password" name="password"
+                    <input <?= set_value('password') ?> required type="password" name="password"
                         placeholder="password">
                 </div>
 

@@ -65,11 +65,8 @@ $session = \Config\Services::session();
                         </div>
                     </div>
                     <div class="controls">
-
                         <a class="green-btn" href="<?= base_url(); ?>/admin">Go Back</a>
-
                         <input class="pink-btn" type="submit" value="Create">
-
                     </div>
                     <?= form_close(); ?>
                 </div>

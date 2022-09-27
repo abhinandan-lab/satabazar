@@ -126,6 +126,22 @@ body {
   box-shadow: 2px 2px 4px #6D1137;
 }
 
+.errors {
+  background-color: #ff0016;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 5px;
+}
+.errors p,
+.errors li {
+  color: white;
+  font-size: 0.9em;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: capitalize;
+}
+
 .sattalist {
   margin-top: 1em;
   border: 3px solid #FF00A2;
@@ -151,21 +167,6 @@ body {
   margin-bottom: 1em;
   justify-content: center;
   align-items: center;
-}
-.sattalist .errors {
-  background-color: #ff0016;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  padding: 5px;
-}
-.sattalist .errors p,
-.sattalist .errors li {
-  color: white;
-  font-size: 0.9em;
-  font-weight: normal;
-  font-style: normal;
-  text-transform: capitalize;
 }
 .sattalist .item {
   display: flex;
@@ -432,4 +433,106 @@ body {
 .jodi td {
   padding: 10px;
   font-weight: bold;
+}
+
+.settings {
+  border: 3px solid #FF00A2;
+  border-radius: 15px;
+  margin-top: 1em;
+}
+.settings .errors {
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  margin-top: 1em;
+}
+.settings .inputs {
+  max-width: 650px;
+  padding: 1em;
+  margin: auto;
+  margin-top: 1em;
+}
+.settings .inputs a {
+  margin-bottom: 1em;
+  display: inline-block;
+  min-width: 170px;
+}
+.settings .inputs p {
+  font-size: 0.9em;
+  font-weight: 100;
+  color: #6D1137;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 1em;
+}
+.settings .inputs p span {
+  color: #00199F;
+}
+.settings .inputs .form-control label {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #6D1137;
+}
+.settings .inputs .form-control input[type=checkbox] {
+  transform: scale(1.3);
+}
+.settings .inputs .form-control input[type=submit] {
+  margin-top: 1em;
+  font-size: 1em;
+  min-width: 150px;
+  cursor: pointer;
+}
+.settings .inputs .form-control .checkbox {
+  font-size: 1.1em;
+}
+.settings .inputs .form-control .input-text {
+  margin-bottom: 1em;
+}
+.settings .inputs .form-control .input-text label {
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+}
+.settings .inputs .form-control .input-text input {
+  font-weight: bold;
+  display: block;
+  padding: 0.2em;
+  font-size: 1.2em;
+  width: 100%;
+  background-color: #FFCC99;
+  border: 1px solid white;
+  outline: none;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 426px) {
+  .container {
+    margin: 4px;
+  }
+  .logo {
+    font-size: 2.4em;
+    padding: 0.2em;
+  }
+  .pink-head {
+    font-size: 1.4em;
+  }
+  .sattalist .item .info h3 {
+    font-size: 1.25em;
+  }
+  .sattalist .item .info p:nth-of-type(2) {
+    font-size: 0.84em;
+  }
+  .blue-btn {
+    padding: 0.2em;
+  }
+  .nb {
+    font-size: 0.5em !important;
+  }
+  .mid {
+    font-size: 0.7em !important;
+  }
+  .dt {
+    font-size: 0.5em !important;
+    padding: 4px !important;
+  }
+  thead tr th {
+    font-size: 0.5em !important;
+  }
 }/*# sourceMappingURL=satta.css.map */

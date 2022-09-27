@@ -68,8 +68,6 @@ body {
     border: 3px solid white;
     font-size: $em2/1.2;
     border-radius: $global-div-border-radius;
-
-
 }
 
 // buttons
@@ -161,6 +159,24 @@ body {
 // end buttons
 
 
+.errors {
+    background-color: $red-color;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    padding: 5px;
+
+    p,
+    li {
+        color: white;
+        font-size: 0.9em;
+        font-weight: normal;
+        font-style: normal;
+        text-transform: capitalize;
+    }
+}
+
+
 .sattalist {
     margin-top: $em1;
     border: 3px solid $pink-color;
@@ -195,24 +211,6 @@ body {
     }
 
     // end delete confirm
-
-    .errors {
-        background-color: $red-color;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        border-radius: 8px;
-        padding: 5px;
-
-        p,
-        li {
-            color: white;
-            font-size: 0.9em;
-            font-weight: normal;
-            font-style: normal;
-            text-transform: capitalize;
-        }
-    }
-
 
     .item {
         display: flex;
@@ -574,4 +572,149 @@ body {
         font-weight: bold;
       }
 }
+
+.settings {
+    border: 3px solid $pink-color;
+    border-radius: $global-div-border-radius;
+    margin-top: $em1;
+
+    .errors {
+        width: 90%;
+        text-align: center;
+        margin: auto;
+        margin-top: $em1;
+    }
+
+    .inputs {
+        max-width: 650px;
+        // border: 1px solid;
+        padding: $em1;
+        margin: auto;
+        margin-top: $em1;
+
+        a {
+            margin-bottom: $em1;
+            // border: 1px solid;
+            display: inline-block;
+            min-width: 170px;
+        }
+
+        p {
+            font-size: $em1 * 0.9;
+            font-weight: 100;
+            color:$purple-color;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: $em1;
+
+            span {
+                color: $darkblue-color;
+            }
+
+        }
+
+        .form-control {
+            label {
+                font-family: Arial, Helvetica, sans-serif;
+                color: $purple-color;
+            }
+
+            input[type=checkbox] {
+                transform: scale(1.3);
+            }
+
+            input[type=submit] {
+                margin-top: $em1;
+                font-size: $em1;
+                min-width: 150px;
+                cursor: pointer;
+            }
+
+            .checkbox {
+                font-size: $em1 * 1.1;
+            }
+
+            .input-text {
+                margin-bottom: $em1;
+            }
+
+            .input-text label {
+                font-family: 'Courier New', Courier, monospace;
+                color: black;
+                // margin-bottom: 20px;
+                // border: 1px solid;
+
+            }
+
+            .input-text input {
+                font-weight: bold;
+                // text-align: center;
+                display: block;
+                padding: $em1 * 0.2;
+                font-size: 1.2em;
+                width: 100%;
+                background-color: $cream-color;
+                border: 1px solid white;
+                outline: none;
+            }
+        }
+    }
+
+
+
+
+}
+
+
+// media queryies
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 426px) {
+
+    $global-div-border-radius: 10px;
+
+    .container {
+        margin: 4px;
+    }
+
+    .logo {
+        font-size: 2.4em;
+        padding: .2em;
+    };
+
+    .pink-head {
+        font-size: $em1 * 1.4;    
+    }
+    .sattalist .item .info h3 {
+        font-size: 1.25em;
+    }
+
+    .sattalist .item .info p:nth-of-type(2) {
+        font-size: 0.84em;
+    }
+
+    .blue-btn {
+        padding: 0.2em;
+    }
+
+    .nb {
+        font-size: $em1 * .5 !important;
+    }
+
+    .mid {
+        font-size: $em1 * 0.7 !important;
+    }
+
+    .dt {
+        font-size: $em1 * .5 !important;
+        padding: 4px !important;
+    }
+
+    thead tr th {
+        font-size: $em1 * 0.5 !important;
+    }
+
+  }
+
+
+
 
