@@ -1,0 +1,658 @@
+CRITICAL - 2022-09-27 19:51:57 --> Array to string conversion
+in APPPATH\Views\satta_jodi.php on line 13.
+ 1 APPPATH\Views\satta_jodi.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\satta_jodi.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(304): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:55:32 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 14.
+ 1 APPPATH\Views\satta_jodi.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(308): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:55:57 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 14.
+ 1 APPPATH\Views\satta_jodi.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(308): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:56:02 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 14.
+ 1 APPPATH\Views\satta_jodi.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(308): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:56:04 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 14.
+ 1 APPPATH\Views\satta_jodi.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(308): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:56:37 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(308): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:56:38 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(308): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:56:38 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(308): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:56:38 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(308): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:56:39 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(308): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:56:39 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(308): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:58:02 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(310): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:58:34 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(310): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:58:35 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(310): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:58:35 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(310): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:58:35 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(310): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:59:03 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(310): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:59:04 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(310): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:59:04 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(310): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:59:04 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(310): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 19:59:04 --> Undefined variable $satta
+in APPPATH\Views\satta_jodi.php on line 15.
+ 1 APPPATH\Views\satta_jodi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_jodi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_jodi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_jodi', [], true)
+ 5 APPPATH\Controllers\Home.php(310): view('satta_jodi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaJodi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 20:00:52 --> Undefined variable $satta
+in APPPATH\Views\satta_panel.php on line 12.
+ 1 APPPATH\Views\satta_panel.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_panel.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_panel.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_panel', [], true)
+ 5 APPPATH\Controllers\Home.php(290): view('satta_panel', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaPanel('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 20:01:42 --> Undefined variable $satta
+in APPPATH\Views\satta_panel.php on line 12.
+ 1 APPPATH\Views\satta_panel.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satta', 'APPPATH\\Views\\satta_panel.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\satta_panel.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('satta_panel', [], true)
+ 5 APPPATH\Controllers\Home.php(290): view('satta_panel', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->sattaPanel('2')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 20:50:28 --> Encrypter needs a starter key.
+in SYSTEMPATH\Encryption\Encryption.php on line 124.
+ 1 SYSTEMPATH\Encryption\Encryption.php(124): CodeIgniter\Encryption\Exceptions\EncryptionException::forNeedsStarterKey()
+ 2 SYSTEMPATH\Config\Services.php(240): CodeIgniter\Encryption\Encryption->initialize(Object(Config\Encryption))
+ 3 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::encrypter()
+ 4 APPPATH\Controllers\Home.php(403): CodeIgniter\Config\BaseService::__callStatic('encrypter', [])
+ 5 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 20:56:21 --> Call to undefined method App\Controllers\Home::config()
+in APPPATH\Controllers\Home.php on line 421.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 20:57:04 --> Undefined property: App\Controllers\Home::$abc
+in APPPATH\Controllers\Home.php on line 422.
+ 1 APPPATH\Controllers\Home.php(422): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$abc', 'APPPATH\\Controllers\\Home.php', 422)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 20:57:06 --> Undefined property: App\Controllers\Home::$abc
+in APPPATH\Controllers\Home.php on line 422.
+ 1 APPPATH\Controllers\Home.php(422): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$abc', 'APPPATH\\Controllers\\Home.php', 422)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 20:57:06 --> Undefined property: App\Controllers\Home::$abc
+in APPPATH\Controllers\Home.php on line 422.
+ 1 APPPATH\Controllers\Home.php(422): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$abc', 'APPPATH\\Controllers\\Home.php', 422)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 20:57:07 --> Undefined property: App\Controllers\Home::$abc
+in APPPATH\Controllers\Home.php on line 422.
+ 1 APPPATH\Controllers\Home.php(422): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$abc', 'APPPATH\\Controllers\\Home.php', 422)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 20:57:07 --> Undefined property: App\Controllers\Home::$abc
+in APPPATH\Controllers\Home.php on line 422.
+ 1 APPPATH\Controllers\Home.php(422): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$abc', 'APPPATH\\Controllers\\Home.php', 422)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 20:59:45 --> Undefined property: App\Controllers\Home::$abc
+in APPPATH\Controllers\Home.php on line 422.
+ 1 APPPATH\Controllers\Home.php(422): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$abc', 'APPPATH\\Controllers\\Home.php', 422)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:00:04 --> Undefined property: App\Controllers\Home::$abc
+in APPPATH\Controllers\Home.php on line 423.
+ 1 APPPATH\Controllers\Home.php(423): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$abc', 'APPPATH\\Controllers\\Home.php', 423)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:00:05 --> Undefined property: App\Controllers\Home::$abc
+in APPPATH\Controllers\Home.php on line 423.
+ 1 APPPATH\Controllers\Home.php(423): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$abc', 'APPPATH\\Controllers\\Home.php', 423)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:00:06 --> Undefined property: App\Controllers\Home::$abc
+in APPPATH\Controllers\Home.php on line 423.
+ 1 APPPATH\Controllers\Home.php(423): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$abc', 'APPPATH\\Controllers\\Home.php', 423)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:00:27 --> Undefined property: App\Controllers\Home::$abc
+in APPPATH\Controllers\Home.php on line 423.
+ 1 APPPATH\Controllers\Home.php(423): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$abc', 'APPPATH\\Controllers\\Home.php', 423)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:06:20 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:06:23 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:07:48 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:07:49 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:07:50 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:07:50 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:07:51 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:07:51 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:08:11 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:08:12 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:08:12 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:08:13 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:10:26 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:10:27 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:10:27 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:10:28 --> Too few arguments to function App\Controllers\Home::__construct(), 0 passed in C:\xampp\htdocs\satabazar\system\CodeIgniter.php on line 869 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:14:20 --> Call to a member function first() on array
+in APPPATH\Controllers\Home.php on line 350.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:14:22 --> Call to a member function first() on array
+in APPPATH\Controllers\Home.php on line 350.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:14:23 --> Call to a member function first() on array
+in APPPATH\Controllers\Home.php on line 350.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:14:23 --> Call to a member function first() on array
+in APPPATH\Controllers\Home.php on line 350.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:14:24 --> Call to a member function first() on array
+in APPPATH\Controllers\Home.php on line 350.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:14:42 --> Call to a member function first() on array
+in APPPATH\Controllers\Home.php on line 350.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:14:43 --> Call to a member function first() on array
+in APPPATH\Controllers\Home.php on line 350.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:14:43 --> Call to a member function first() on array
+in APPPATH\Controllers\Home.php on line 350.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:23:38 --> Undefined variable $admin
+in APPPATH\Controllers\Home.php on line 355.
+ 1 APPPATH\Controllers\Home.php(355): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Controllers\\Home.php', 355)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:25:19 --> Undefined array key "email"
+in APPPATH\Controllers\Home.php on line 354.
+ 1 APPPATH\Controllers\Home.php(354): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', 'APPPATH\\Controllers\\Home.php', 354)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:27:19 --> Array to string conversion
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:27:35 --> Undefined array key "id"
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:32:57 --> Undefined variable $encrypter
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $encrypter', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:33:55 --> Undefined variable $config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:33:56 --> Undefined variable $config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:33:56 --> Undefined variable $config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:33:57 --> Undefined variable $config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:34:08 --> Undefined variable $config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:34:09 --> Undefined variable $config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:34:09 --> Undefined variable $config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:34:09 --> Undefined variable $config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:34:10 --> Undefined variable $config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:34:18 --> Undefined property: App\Controllers\Home::$config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:34:19 --> Undefined property: App\Controllers\Home::$config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:34:19 --> Undefined property: App\Controllers\Home::$config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:35:03 --> Undefined variable $config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:35:04 --> Undefined variable $config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:35:05 --> Undefined variable $config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 21:35:05 --> Undefined variable $config
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->setdefaultAdminCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 22:06:25 --> Encrypter needs a starter key.
+in SYSTEMPATH\Encryption\Encryption.php on line 124.
+ 1 SYSTEMPATH\Encryption\Encryption.php(124): CodeIgniter\Encryption\Exceptions\EncryptionException::forNeedsStarterKey()
+ 2 SYSTEMPATH\Config\Services.php(240): CodeIgniter\Encryption\Encryption->initialize(Object(Config\Encryption))
+ 3 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::encrypter()
+ 4 APPPATH\Controllers\Home.php(43): CodeIgniter\Config\BaseService::__callStatic('encrypter', [])
+ 5 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminLogin()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 22:07:53 --> Encrypter needs a starter key.
+in SYSTEMPATH\Encryption\Encryption.php on line 124.
+ 1 SYSTEMPATH\Encryption\Encryption.php(124): CodeIgniter\Encryption\Exceptions\EncryptionException::forNeedsStarterKey()
+ 2 SYSTEMPATH\Config\Services.php(240): CodeIgniter\Encryption\Encryption->initialize(Object(Config\Encryption))
+ 3 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::encrypter()
+ 4 APPPATH\Controllers\Home.php(43): CodeIgniter\Config\BaseService::__callStatic('encrypter', [])
+ 5 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminLogin()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 22:09:41 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 98.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(98): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Controllers\Home.php(50): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('�G?:tmr?qeӓ͞<}?N?לx=?1[??2?')
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

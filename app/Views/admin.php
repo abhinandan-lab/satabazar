@@ -4,8 +4,7 @@
 
 <?=$this->section("content")?>
 
-    <div class="container">
-        <h1 class="logo">sata bazar</h1>
+
 
         <div class="sattalist">
             <h2 class="pink-head">LIVE RESULT</h2>
@@ -22,7 +21,8 @@
 
 
             <div class="action">
-                <a class="pink-btn" href="<?= base_url();?>/create">Create satta</a>
+                <a class="pink-btn" href="<?= base_url();?>/create">Create satta</a> &nbsp;
+                <a class="pink-btn" href="<?= base_url();?>/adminsettings">Settings</a>
             </div>
 
             <?php foreach($list as $row) {  ?>

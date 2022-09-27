@@ -2,8 +2,7 @@
 
 <?=$this->section("content")?>
 
-    <div class="container">
-        <h1 class="logo">sata bazar</h1>
+
 
         <div class="sattalist">
             <h2 class="pink-head italic">Delete Confirmation</h2>

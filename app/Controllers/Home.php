@@ -11,7 +11,6 @@ class Home extends BaseController
 
     protected $helpers = ['form', 'session', 'SmallFunctions'];
 
-
     public function index()
     {
         $sattamodel = new SattaModel();
@@ -41,16 +40,21 @@ class Home extends BaseController
 
         $request = \Config\Services::request();
         $session = \Config\Services::session();
+        $encrypter = \Config\Services::encrypter(encryptionConfig());
 
         $userModel = new AdminModel();
         $email = $this->request->getVar('email');
         $pass =  $this->request->getVar('password');
         $user = $userModel->where( 'email', $email)->first();
 
+        $decryptedpass = $encrypter->decrypt($user['password']);
+
+        return $decryptedpass;
+
         if($user != null) {
             if($user['email'] == $email) {
                 // echo 'valid email';
-                if($user['password'] == $pass) {
+                if($decryptedpass == $pass) {
                     // all good setting session
                     $ses_data = [
                         'id' => $user['id'],
@@ -274,23 +278,24 @@ class Home extends BaseController
         return view('confirmation', ['row' => $row ]);
     }
 
-
     public function sattaPanel($id = null) {
         // echo $id;
 
         if($id != null) {
             
             $sataPanelModel = new SattaPanelModel();
+            $sataRowModel = new SattaModel();
+            $sataRow = $sataRowModel->find($id);
             
             $rowsPanel = $sataPanelModel->where('satta_id', $id)->orderBy('created_at', 'asc')->findAll();
             // $rowsPanel = $sataPanelModel->where(['satta_id' => $id, 'id' => 3])->orderBy('created_at', 'asc')->findAll();
 
             // echo '<pre>';
             // print_r($rowsPanel);
-            return view('satta_panel', ['rows' => $rowsPanel]);
+            return view('satta_panel', ['rows' => $rowsPanel, 'satta' => $sataRow]);
         }
 
-        return view('satta_panel', ['rows' => null]);
+        return view('satta_panel', ['rows' => $rowsPanel, 'satta' => $sataRow]);
 
     }
 
@@ -298,12 +303,63 @@ class Home extends BaseController
         if($id != null) {
             
             $sataPanelModel = new SattaPanelModel();
+
+            $sataRowModel = new SattaModel();
+            $sataRow = $sataRowModel->find($id);
+
+
+
             
             $rowsPanel = $sataPanelModel->where('satta_id', $id)->orderBy('created_at', 'asc')->findAll();
             // echo 'praise the LORD';
-            return view('satta_jodi', ['rows' => $rowsPanel]);
+            return view('satta_jodi', ['rows' => $rowsPanel, 'satta' => $sataRow]);
         }
-        return view('satta_jodi', ['rows' => null]);
+        return view('satta_jodi', ['rows' => null, 'satta' => $sataRow]);
+    }
+
+    public function adminSettings() {
+        return view('adminsettings');
+    }
+
+    public function adminChangePassword() {
+
+        // send otp 
+        // create verification link, otp number 
+        // view to enter otp
+        // if matches to otp or link then 
+        // chaange from db
+
+        return 'j';
+    }
+
+    public function adminChangeEmail() {
+        return 'jl';
+    }
+
+    public function setdefaultAdminCredentials() {
+
+        $admin = new AdminModel();
+        $data = $admin->findall();
+
+        if(count($data) == 0) {
+            // create admin with default email and password
+
+            $email = 'oldghantabazar@gmail.com';
+            $encrypter = \Config\Services::encrypter(encryptionConfig());
+            $password = $encrypter->encrypt('abhishekgunji121#');
+
+            $logindata = [
+                'email' => $email,
+                'password' => $password,
+            ];
+
+            $admin->insert($logindata);
+            return redirect()->to('/admin');
+            
+        }
+
+        return redirect()->to('/admin');
+        
     }
 
 
@@ -318,7 +374,7 @@ class Home extends BaseController
 
         // echo '<br>';
 
-        echo '<pre>';
+        // echo '<pre>';
 
         // date_default_timezone_set("Asia/Calcutta");
         // $currentDate = date('Y-m-d', time());
@@ -361,14 +417,26 @@ class Home extends BaseController
         // print_r($newArray);
 
 
-        $arr = ['a','b','c',['aa','bb','cc']];
+        // $arr = ['a','b','c',['aa','bb','cc']];
 
-        print_r($arr);
+        // print_r($arr);
+        // $arr[1] = 'd';
+        // $arr[3][2] = 'zz';
+        // print_r($arr);
+        // $config        = new \Config\Encryption();
+        // $config->key    = 'praisetheLORD';
+        // $config->driver = 'OpenSSL';
 
+        // $encrypter = \Config\Services::encrypter($config);
 
-        $arr[1] = 'd';
-        $arr[3][2] = 'zz';
-        print_r($arr);
+        // $plainText  = 'This is a plain-text message!';
+        // $ciphertext = $encrypter->encrypt($plainText);
+        // // echo $ciphertext;
+        // // echo $encrypter->decrypt($ciphertext);
+
+        // return $ciphertext;
+
+        return $this->abc;
 
 
     }

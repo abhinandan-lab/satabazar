@@ -292,3 +292,12 @@ function getPanelArrayData($rows) {
                 // print_r($arrayData);
                 return $arrayData;
 }
+
+
+function encryptionConfig() {
+    $config = new \Config\Encryption();
+    $config->key    = 'praisetheLORD';
+    $config->driver = 'OpenSSL';
+
+    return $config;
+}

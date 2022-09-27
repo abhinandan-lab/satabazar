@@ -2,14 +2,12 @@
 
 <?=$this->section("content")?>
 
-<div class="container">
-    <h1 class="logo">sata bazar</h1>
 
 
     <button type="button" class="blue-btn my1"> Goto Bottom</button>
 
     <div class="panel">
-        <h1 class="pink-head">Madhuri panel chart</h1>
+        <h1 class="pink-head uppercase"><?= $satta['name'] ?> </h1>
         <table>
             <thead>
                 <tr>

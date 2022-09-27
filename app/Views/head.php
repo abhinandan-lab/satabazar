@@ -10,5 +10,7 @@
     <link rel="stylesheet" href="<?= base_url();?>/public/asset/css/satta.css">
 </head>
 <body>
+<div class="container">
+        <h1 class="logo">sata bazar</h1>
 
 <?= $this->renderSection("content"); ?>

@@ -38,6 +38,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 
 $routes->get('test', 'Home::test');
+$routes->get('setAdminDefaults', 'Home::setdefaultAdminCredentials');
 
 
 $routes->get('satta-panel/(:num)', 'Home::sattaPanel/$1');
@@ -62,6 +63,12 @@ $routes->group('', ['filter'=> 'isAdminLoggedin'], function($routes){
 
     $routes->get('confirm-delete/(:num)', 'Home::adminSattaDeleteConfirmation/$1');
     $routes->get('satta-delete/(:num)', 'Home::adminSattaDelete/$1');
+    
+    $routes->get('adminsettings', 'Home::adminSettings');
+    $routes->get('admin-change-password', 'Home::adminChangePassword');
+    $routes->get('admin-change-email', 'Home::adminChangeEmail');
+    
+
 });
 
 

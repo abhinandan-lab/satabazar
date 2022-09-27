@@ -10,8 +10,6 @@ $session = \Config\Services::session();
 
 ?>
 
-    <div class="container">
-        <h1 class="logo">sata bazar</h1>
 
         <div class="sattalist">
             <?php
