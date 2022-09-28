@@ -40,21 +40,18 @@ class Home extends BaseController
 
         $request = \Config\Services::request();
         $session = \Config\Services::session();
-        $encrypter = \Config\Services::encrypter(encryptionConfig());
 
         $userModel = new AdminModel();
         $email = $this->request->getVar('email');
         $pass =  $this->request->getVar('password');
         $user = $userModel->where( 'email', $email)->first();
 
-        $decryptedpass = $encrypter->decrypt($user['password']);
-
-        return $decryptedpass;
+        $hashed_password = $user['password'];
 
         if($user != null) {
             if($user['email'] == $email) {
                 // echo 'valid email';
-                if($decryptedpass == $pass) {
+                if(password_verify($pass, $hashed_password)) {
                     // all good setting session
                     $ses_data = [
                         'id' => $user['id'],
@@ -345,8 +342,7 @@ class Home extends BaseController
             // create admin with default email and password
 
             $email = 'oldghantabazar@gmail.com';
-            $encrypter = \Config\Services::encrypter(encryptionConfig());
-            $password = $encrypter->encrypt('abhishekgunji121#');
+            $password = password_hash('abhishekgunji121#', PASSWORD_DEFAULT);
 
             $logindata = [
                 'email' => $email,
@@ -354,90 +350,53 @@ class Home extends BaseController
             ];
 
             $admin->insert($logindata);
-            return redirect()->to('/admin');
-            
+            return redirect()->to('/admin'); 
         }
-
         return redirect()->to('/admin');
-        
     }
 
 
     public function test() {
-        // date_default_timezone_set("Asia/Calcutta");
-        // $date = date('m/d/Y', time());
-        // $date = date('m/d/Y h:i:s a', time());
-        // echo gettype( $date );
 
-        // $onlydate = substr('2022-09-25 22:43:14', 0, 10);
-        // echo $onlydate;
+        // $password = 'oldghantabazar@gmail.com';
+        // echo '<br>';
+        // echo $password;
+
+        // $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         // echo '<br>';
+        // echo $hashed_password;
+        // // var_dump($hashed_password);
 
-        // echo '<pre>';
+        // if(password_verify($password, $hashed_password)) {
+        //     // If the password inputs matched the hashed password in the database
+        //     // Do something, you know... log them in.
+        //     echo 'helo';
+        // } 
+        // else {
+        //     echo '<br>';
+        //     echo 'no';
+        // }
 
-        // date_default_timezone_set("Asia/Calcutta");
-        // $currentDate = date('Y-m-d', time());
-        // return $currentDate;
-
-        // $id = 3;
-        // $satamodel = new SattaModel();
-        // $row = $satamodel->find($id);
-
-        // $sataPanelModel = new SattaPanelModel();
-        // $rowsPanel = $sataPanelModel->where('satta_id', $id)->findAll();
-        // $sataPanelModel->where('satta_id', $id)->delete();
-        // // $userModel->delete([1, 2, 3]);
-
-        // print_r($rowsPanel);
-
-
-        // echo strtotime("last Monday");
-        // echo '<br>';
-        // // echo date('Y-m-d',strtotime('last monday', strtotime('2022-09-28')));
+        $to = 'oldghantabazar@gmail.com';
+        $subject = 'hello sub';
+        $message = 'good mor';
         
-        // echo findPreviouMonDate('2022-08-16', true);
-        // echo '<br>';
-
-        // return findNextSunDate('2022-08-16');
-
-
-        // $timestamp = strtotime('2009-10-22');
-
-        // $day = date('D', $timestamp);
-        // echo $day;
-
-        // $newArray = [];
-        // // echo $newArray;
+        $email = \Config\Services::email();
+        $email->setFrom('ar253336@gmail.com', 'Confirm Registration');
+        $email->setTo($to);
         
-        // array_push($newArray, "abc");
-
-
-        // array_push($newArray, [1,2]);
-        // print_r($newArray);
-
-
-        // $arr = ['a','b','c',['aa','bb','cc']];
-
-        // print_r($arr);
-        // $arr[1] = 'd';
-        // $arr[3][2] = 'zz';
-        // print_r($arr);
-        // $config        = new \Config\Encryption();
-        // $config->key    = 'praisetheLORD';
-        // $config->driver = 'OpenSSL';
-
-        // $encrypter = \Config\Services::encrypter($config);
-
-        // $plainText  = 'This is a plain-text message!';
-        // $ciphertext = $encrypter->encrypt($plainText);
-        // // echo $ciphertext;
-        // // echo $encrypter->decrypt($ciphertext);
-
-        // return $ciphertext;
-
-        return $this->abc;
-
+        $email->setSubject($subject);
+        $email->setMessage($message);
+        if ($email->send()) 
+        {
+            echo 'Email successfully sent';
+        } 
+        else 
+        {
+            $data = $email->printDebugger(['headers']);
+            print_r($data);
+        }
 
     }
 }
