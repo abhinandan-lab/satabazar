@@ -1,7 +1,4 @@
 <?=$this->extend("head")?>
-
-
-
 <?=$this->section("content")?>
 
 
@@ -11,6 +8,15 @@
 
             <div class="info">
 
+            <?php
+
+            $session = session();
+
+            if( isset($_SESSION['success'])) {
+                echo '<p>'. $_SESSION['success'] .'</p> <br>';
+            }
+
+            ?>
 
                 <div class="inputs">
 
@@ -21,7 +27,7 @@
                     <div class="form-control">
                         <?= form_open(); ?>
                             <div class="checkbox">
-                                <input type="checkbox" id="otpVerification" name="otpVerification" value="Bike">
+                                <input type="checkbox" id="otpVerification" name="otpVerification" value="true" >
                                 <label for="otpVerification"> Enable OTP verification on login</label>
                             </div>
                             <input type="submit" value="Save" class="pink-btn">    

@@ -21,6 +21,11 @@ class Admin extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => 150,
             ],
+
+            'two_step_auth' => [
+                'type' => 'VARCHAR',
+                'constraint' => 10,
+            ],
             
             'password' => [
                 'type' => 'VARCHAR',

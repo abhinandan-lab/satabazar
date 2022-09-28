@@ -40,19 +40,79 @@ class Home extends BaseController
 
         $request = \Config\Services::request();
         $session = \Config\Services::session();
+        $emailService = \Config\Services::email();
 
         $userModel = new AdminModel();
         $email = $this->request->getVar('email');
         $pass =  $this->request->getVar('password');
         $user = $userModel->where( 'email', $email)->first();
 
-        $hashed_password = $user['password'];
-
+        
         if($user != null) {
+
+            $hashed_password = $user['password'];
+
             if($user['email'] == $email) {
                 // echo 'valid email';
                 if(password_verify($pass, $hashed_password)) {
                     // all good setting session
+
+
+                    
+                    if($user['two_step_auth'] == 'true') {
+                        // verify otp
+                        echo 'hello';
+                        return 'hello';
+
+                        $subject = 'OTP for admin login';
+                        $message = 'test message';
+
+                        if (strtolower($this->request->getMethod()) !== 'post') {
+                            // get request | send email
+
+                            // create admin with default email and password
+                            $to = $user['email'];
+                            $email->setFrom('oldghantabazar@gmail.com', 'OTP login request');
+                            $email->setTo($to);
+
+                            $generatedOtp = randomNumber();
+                            $otpHash = password_hash($generatedOtp, PASSWORD_DEFAULT);
+
+                            $admin->update($adminrow['id'], ['verify_otp'=> $otpHash]);
+                            $email->setSubject($subject);
+                            // Using a custom template
+                            $template = view("changePasswordEmailTemplate", ['email'=>$to, 'otp'=> $generatedOtp, 'otphash'=> $otpHash ]);
+                            $email->setMessage($template);
+                            if ($email->send()) 
+                            {
+                                // echo 'Email successfully sent';
+                                // get otp view
+
+                                $session->setFlashdata('success', 'Email sent successfully');
+                                return view('getOtpPassword', ['email'=> $adminrow['email']]);
+                            } 
+                            else 
+                            {
+                                // $data = $email->printDebugger(['headers']);
+                                // print_r($data);
+                                // adminsetting view with error flash
+
+                                $session->setFlashdata('success', 'something went! Email not sent');
+                                return redirect()->to('/adminsettings'); 
+                            }
+                        }
+
+                    }
+                    else {
+                        $ses_data = [
+                            'id' => $user['id'],
+                            'email' => $user['email'],
+                            'admin' => TRUE
+                        ];
+                        $session->set($ses_data);
+                        return redirect()->to('/admin');
+                    }
+
                     $ses_data = [
                         'id' => $user['id'],
                         'email' => $user['email'],
@@ -76,7 +136,6 @@ class Home extends BaseController
 
         }
     }
-
 
     public function admin() {
         // showing list of satta with option to edit and delete
@@ -163,7 +222,6 @@ class Home extends BaseController
         return redirect('create');
     }
 
-
     public function adminSattaEdit($id = null) {
         
         $satamodel = new SattaModel();
@@ -246,7 +304,6 @@ class Home extends BaseController
         return redirect('admin');
     }
 
-
     public function adminSattaDelete($id = null) {
 
         $session = \Config\Services::session();
@@ -303,9 +360,6 @@ class Home extends BaseController
 
             $sataRowModel = new SattaModel();
             $sataRow = $sataRowModel->find($id);
-
-
-
             
             $rowsPanel = $sataPanelModel->where('satta_id', $id)->orderBy('created_at', 'asc')->findAll();
             // echo 'praise the LORD';
@@ -315,22 +369,178 @@ class Home extends BaseController
     }
 
     public function adminSettings() {
-        return view('adminsettings');
+        // return view('adminsettings');
+
+        $request = \Config\Services::request();
+        $session = \Config\Services::session();
+        $userEmail = $session->get('email');
+
+        $admin = new AdminModel();
+        $user = $admin->where( 'email', $userEmail)->first();
+
+        if (strtolower($this->request->getMethod()) !== 'post') {
+            // get request
+
+            if($user['two_step_auth'] == 'true') {
+                
+                return view('adminsettings', ['otp_enable'=> 'checked']);
+            }
+            else {
+                return view('adminsettings', ['otp_enable'=> null]);
+            }
+        }
+
+        // post request
+        $boolval = $this->request->getVar('otpVerification');
+
+        if($boolval != null ) {
+            // enable otp setting
+            $session->setFlashdata('success', 'Setting saved successfully');
+            $admin->update($session->get('id'), ['two_step_auth' => 'true']);
+            return redirect()->to('/adminsettings');
+
+        }
+        else {
+            $session->setFlashdata('success', 'Setting saved successfully');
+            $admin->update($session->get('id'), ['two_step_auth' => 'false']);
+            return redirect()->to('/adminsettings');
+        }
+
     }
 
     public function adminChangePassword() {
 
-        // send otp 
-        // create verification link, otp number 
-        // view to enter otp
-        // if matches to otp or link then 
-        // chaange from db
+        // return view('changePasswordEmailTemplate');
+        $email = \Config\Services::email();
+        $session = \Config\Services::session();
+        $request = \Config\Services::request();
 
-        return 'j';
+        $admin = new AdminModel();
+        $data = $admin->findall();
+
+
+        if(count($data) == 0) { 
+            $url = base_url().'/setAdminDefaults';
+            $session->setFlashdata('success', 'There is no admin, <a href="'.$url.'">click here to create</a>');
+            return redirect()->to('/admin');
+        }
+        
+
+        $subject = 'Requested to Change Admin Password';
+        $message = 'test message';
+        $adminrow = $data[0];
+
+        if (strtolower($this->request->getMethod()) !== 'post') {
+            // get request | send email
+
+            // create admin with default email and password
+
+
+            $to = $adminrow['email'];
+            $email->setFrom('oldghantabazar@gmail.com', 'Change Admin Password');
+            $email->setTo($to);
+
+            $generatedOtp = randomNumber();
+            $otpHash = password_hash($generatedOtp, PASSWORD_DEFAULT);
+
+            $admin->update($adminrow['id'], ['verify_otp'=> $otpHash]);
+            $email->setSubject($subject);
+            // Using a custom template
+            $template = view("changePasswordEmailTemplate", ['email'=>$to, 'otp'=> $generatedOtp, 'otphash'=> $otpHash ]);
+            $email->setMessage($template);
+            if ($email->send()) 
+            {
+                // echo 'Email successfully sent';
+                // get otp view
+
+                $session->setFlashdata('success', 'Email sent successfully');
+                return view('getOtpPassword', ['email'=> $adminrow['email']]);
+            } 
+            else 
+            {
+                // $data = $email->printDebugger(['headers']);
+                // print_r($data);
+                // adminsetting view with error flash
+
+                $session->setFlashdata('success', 'something went! Email not sent');
+                return redirect()->to('/adminsettings'); 
+            }
+        }
+
+
+        $rules = [
+            'otp' => 'required|integer|min_length[6]|max_length[6]',
+        ];
+
+        // post request
+        if (! $this->validate($rules)) {
+            return view('getOtpPassword', [
+                'validation' => $this->validator, 'email'=> $adminrow['email']
+            ]);
+        }
+        // verify otp and change admin data
+
+        $otpByuser = (int)$this->request->getVar('otp');
+
+        if(password_verify($otpByuser, $adminrow['verify_otp'])) {
+            // otp match
+            return view('adminGetnewPassword', ['email'=>$adminrow['email']]);
+        }
+        else {
+            // wrong otp
+            $session->setFlashdata('success', 'You entered wrong OTP');
+            return view('getOtpPassword', [
+                'validation' => null, 'email'=> $adminrow['email'],
+            ]);
+        }
+    }
+
+    public function adminGetNewpassword() {
+
+        $request = \Config\Services::request();
+        $session = \Config\Services::session();
+
+        $rules = [
+            'pass' => 'required|min_length[4]',
+        ];
+
+        if (! $this->validate($rules)) {
+            return view('getOtpPassword', [
+                'validation' => $this->validator, 'email'=> $adminrow['email']
+            ]);
+        }
+
+        // update db
+        $admin = new AdminModel();
+        $user = $admin->where( 'email', $this->request->getVar('email'))->first();
+
+        $encryptedpass = password_hash( $this->request->getVar('pass'), PASSWORD_DEFAULT);
+
+        $data = [
+            'verify_otp'    => '',
+            'password'    => $encryptedpass,
+        ];
+
+        $admin->update($user['id'], $data);
+
+        $ses_data = [
+            'id' => null,
+            'email' => null,
+            'admin' => null
+        ];
+        $session->set($ses_data);
+        $session->setFlashdata('success', 'Password updated successfully! login again');
+        return redirect()->to('/admin');
+
+
+
     }
 
     public function adminChangeEmail() {
-        return 'jl';
+
+        $session = \Config\Services::session();
+        $session->setFlashdata('success', 'Change email is not implemeted yet! Comging soon');
+        return redirect()->to('/admin');
     }
 
     public function setdefaultAdminCredentials() {
@@ -350,6 +560,7 @@ class Home extends BaseController
             ];
 
             $admin->insert($logindata);
+            $session->setFlashdata('success', 'Default admin created you can login now');
             return redirect()->to('/admin'); 
         }
         return redirect()->to('/admin');
@@ -378,25 +589,28 @@ class Home extends BaseController
         //     echo 'no';
         // }
 
-        $to = 'oldghantabazar@gmail.com';
-        $subject = 'hello sub';
-        $message = 'good mor';
+        // $to = 'oldghantabazar@gmail.com';
+        // $subject = 'hello sub';
+        // $message = 'good mor';
         
-        $email = \Config\Services::email();
-        $email->setFrom('ar253336@gmail.com', 'Confirm Registration');
-        $email->setTo($to);
+        // $email = \Config\Services::email();
+        // $email->setFrom('ar253336@gmail.com', 'Confirm Registration');
+        // $email->setTo($to);
         
-        $email->setSubject($subject);
-        $email->setMessage($message);
-        if ($email->send()) 
-        {
-            echo 'Email successfully sent';
-        } 
-        else 
-        {
-            $data = $email->printDebugger(['headers']);
-            print_r($data);
-        }
+        // $email->setSubject($subject);
+        // $email->setMessage($message);
+        // if ($email->send()) 
+        // {
+        //     echo 'Email successfully sent';
+        // } 
+        // else 
+        // {
+        //     $data = $email->printDebugger(['headers']);
+        //     print_r($data);
+        // }
+
+
+        echo randomNumber();
 
     }
 }

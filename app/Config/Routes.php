@@ -65,8 +65,15 @@ $routes->group('', ['filter'=> 'isAdminLoggedin'], function($routes){
     $routes->get('satta-delete/(:num)', 'Home::adminSattaDelete/$1');
     
     $routes->get('adminsettings', 'Home::adminSettings');
+    $routes->post('adminsettings', 'Home::adminSettings');
+
     $routes->get('admin-change-password', 'Home::adminChangePassword');
+    $routes->post('admin-change-password', 'Home::adminChangePassword');
+
     $routes->get('admin-change-email', 'Home::adminChangeEmail');
+
+    $routes->post('admin-verify', 'Home::adminVerifyOtp');
+    $routes->post('admin-getnew-password', 'Home::adminGetNewpassword');
     
 
 });

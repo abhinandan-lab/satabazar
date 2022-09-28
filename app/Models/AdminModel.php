@@ -10,6 +10,6 @@ class AdminModel extends Model
 {
     protected $table      = 'admin';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['email', 'password', 'verify_otp'];
+    protected $allowedFields = ['email', 'two_step_auth', 'password', 'verify_otp'];
 
 }

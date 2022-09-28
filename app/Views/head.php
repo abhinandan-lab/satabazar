@@ -11,6 +11,6 @@
 </head>
 <body>
 <div class="container">
-        <h1 class="logo">sata bazar</h1>
+        <h1 class="logo"> <a href="<?= base_url();?>">oldghantabazar</a></h1>
 
 <?= $this->renderSection("content"); ?>

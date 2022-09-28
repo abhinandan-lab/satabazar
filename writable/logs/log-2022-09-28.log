@@ -114,3 +114,181 @@ Stack trace:
 #10 {main}
 ERROR - 2022-09-28 11:25:03 --> Email: Unable to send email using PHP SMTP. Your server might not be configured to send mail using this method.
 ERROR - 2022-09-28 11:25:03 --> 
+CRITICAL - 2022-09-28 17:13:22 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 49.
+ 1 APPPATH\Controllers\Home.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Home.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 19:23:05 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\Home.php on line 363.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(857): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 19:23:07 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\Home.php on line 363.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(857): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 19:23:07 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\Home.php on line 363.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(857): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 19:23:10 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\Home.php on line 363.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(857): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 19:28:55 --> Undefined variable $session
+in APPPATH\Controllers\Home.php on line 353.
+ 1 APPPATH\Controllers\Home.php(353): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Controllers\\Home.php', 353)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminChangePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 20:08:13 --> Undefined variable $row
+in APPPATH\Views\adminEdit.php on line 35.
+ 1 APPPATH\Views\adminEdit.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'APPPATH\\Views\\adminEdit.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\adminEdit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('adminEdit', [], true)
+ 5 APPPATH\Controllers\Home.php(381): view('adminEdit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminChangePassword()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 20:10:27 --> Undefined variable $row
+in APPPATH\Views\adminEdit.php on line 35.
+ 1 APPPATH\Views\adminEdit.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'APPPATH\\Views\\adminEdit.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\adminEdit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('adminEdit', [], true)
+ 5 APPPATH\Controllers\Home.php(381): view('adminEdit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminChangePassword()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 20:13:18 --> Undefined variable $row
+in APPPATH\Views\adminEdit.php on line 35.
+ 1 APPPATH\Views\adminEdit.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'APPPATH\\Views\\adminEdit.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\adminEdit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('adminEdit', [], true)
+ 5 APPPATH\Controllers\Home.php(379): view('adminEdit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminChangePassword()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 20:20:22 --> Undefined variable $email
+in APPPATH\Views\getOtpPassword.php on line 26.
+ 1 APPPATH\Views\getOtpPassword.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $email', 'APPPATH\\Views\\getOtpPassword.php', 26)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(379): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminChangePassword()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 20:20:39 --> Undefined variable $email
+in APPPATH\Views\getOtpPassword.php on line 26.
+ 1 APPPATH\Views\getOtpPassword.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $email', 'APPPATH\\Views\\getOtpPassword.php', 26)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(379): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminChangePassword()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 20:37:30 --> Undefined variable $pass
+in APPPATH\Controllers\Home.php on line 389.
+ 1 APPPATH\Controllers\Home.php(389): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pass', 'APPPATH\\Controllers\\Home.php', 389)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminChangePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 22:00:23 --> Undefined variable $validation
+in APPPATH\Views\adminGetNewPassword.php on line 14.
+ 1 APPPATH\Views\adminGetNewPassword.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\adminGetNewPassword.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\adminGetNewPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('adminGetnewPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(393): view('adminGetnewPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminChangePassword()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 22:02:12 --> Undefined variable $sataPanelModel
+in APPPATH\Controllers\Home.php on line 427.
+ 1 APPPATH\Controllers\Home.php(427): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sataPanelModel', 'APPPATH\\Controllers\\Home.php', 427)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminGetNewpassword()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 22:02:50 --> Undefined variable $session
+in APPPATH\Controllers\Home.php on line 429.
+ 1 APPPATH\Controllers\Home.php(429): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Controllers\\Home.php', 429)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminGetNewpassword()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 22:08:34 --> Call to undefined method CodeIgniter\Session\Session::unset()
+in APPPATH\Controllers\Home.php on line 437.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminGetNewpassword()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 22:25:23 --> Undefined variable $rules
+in APPPATH\Controllers\Home.php on line 327.
+ 1 APPPATH\Controllers\Home.php(327): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rules', 'APPPATH\\Controllers\\Home.php', 327)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminSettings()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 22:41:45 --> Undefined variable $encryptedpass
+in APPPATH\Controllers\Home.php on line 340.
+ 1 APPPATH\Controllers\Home.php(340): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $encryptedpass', 'APPPATH\\Controllers\\Home.php', 340)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminSettings()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 22:41:56 --> Undefined variable $item
+in APPPATH\Controllers\Home.php on line 344.
+ 1 APPPATH\Controllers\Home.php(344): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $item', 'APPPATH\\Controllers\\Home.php', 344)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminSettings()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 22:43:07 --> Undefined variable $user
+in APPPATH\Controllers\Home.php on line 344.
+ 1 APPPATH\Controllers\Home.php(344): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'APPPATH\\Controllers\\Home.php', 344)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminSettings()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 23:15:38 --> Undefined variable $userEmail
+in APPPATH\Controllers\Home.php on line 320.
+ 1 APPPATH\Controllers\Home.php(320): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userEmail', 'APPPATH\\Controllers\\Home.php', 320)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminSettings()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
