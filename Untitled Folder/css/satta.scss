@@ -58,10 +58,25 @@ body {
     border: 3px solid $red-color;
     border-radius: $global-div-border-radius;
 
+    text-transform: capitalize;
+    
+    a {
+        cursor: pointer;
+        color: black;
+    }
+    
+    :visited, :hover {
+        color: black;
+    }
 }
+
 
 .italic {
     font-style: italic;
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
 
 .pink-head {

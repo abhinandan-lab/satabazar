@@ -41,16 +41,22 @@ $routes->get('test', 'Home::test');
 $routes->get('setAdminDefaults', 'Home::setdefaultAdminCredentials');
 
 
+$routes->get('forgot-password-confirm', 'Home::adminForgotPasswordConfirm');
+$routes->get('forgot-admin-password', 'Home::adminChangePassword');
+$routes->post('forgot-admin-password', 'Home::adminForgotAdminPass');
+
+
 $routes->get('satta-panel/(:num)', 'Home::sattaPanel/$1');
 $routes->get('satta-jodi/(:num)', 'Home::sattaJodi/$1');
 
-
-
+$routes->post('admin-getnew-password', 'Home::adminGetNewpassword');
 
 
 // admin routes
 $routes->get('adminlogin', 'Home::adminLogin');
 $routes->post('adminlogin', 'Home::adminLogin');
+
+$routes->post('verify-login-otp', 'Home::adminVerifyOtpLogin');
 
 $routes->group('', ['filter'=> 'isAdminLoggedin'], function($routes){
     $routes->get('admin', 'Home::admin');
@@ -73,7 +79,6 @@ $routes->group('', ['filter'=> 'isAdminLoggedin'], function($routes){
     $routes->get('admin-change-email', 'Home::adminChangeEmail');
 
     $routes->post('admin-verify', 'Home::adminVerifyOtp');
-    $routes->post('admin-getnew-password', 'Home::adminGetNewpassword');
     
 
 });

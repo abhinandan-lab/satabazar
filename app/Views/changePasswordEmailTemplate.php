@@ -121,7 +121,7 @@
     </style>
 
     <!-- MESSAGE SUBJECT -->
-    <title>Change password verification</title>
+    <title> <?= $heading ?></title>
 
 </head>
 
@@ -154,9 +154,7 @@
                             <!-- Set text color to background color -->
                             <div style="display: none; visibility: hidden; overflow: hidden; opacity: 0; font-size: 1px; line-height: 1px; height: 0; max-height: 0; max-width: 0;
 			color: #F0F0F0;" class="preheader">
-                                Available on&nbsp;GitHub and&nbsp;CodePen. Highly compatible. Designer friendly. More
-                                than 50%&nbsp;of&nbsp;total email opens occurred on&nbsp;a&nbsp;mobile device&nbsp;—
-                                a&nbsp;mobile-friendly design is&nbsp;a&nbsp;must for&nbsp;email campaigns.</div>
+                               </div>
 
                             <!-- LOGO -->
                             <!-- Image text color should be opposite to background color. Set your url, image src, alt and title. Alt text should fit the image size. Real image size should be x2. URL format: http://domain.com/?utm_source={{Campaign-Source}}&utm_medium=email&utm_content=logo&utm_campaign={{Campaign-Name}} -->
@@ -182,7 +180,7 @@
 			padding-top: 25px;
 			color: #000000;
 			font-family: sans-serif;" class="header">
-                            Change password verification
+                            <?= $heading ?>
                         </td>
                     </tr>
 
@@ -208,7 +206,7 @@
 			padding-top: 25px; 
 			color: #000000;
 			font-family: sans-serif;" class="paragraph">
-                           Enter this obove OTP to validate your email <br><br>
+                            <?= $para ?> <br><br>
                         </td>
                     </tr>
 

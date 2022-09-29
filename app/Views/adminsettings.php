@@ -27,7 +27,7 @@
                     <div class="form-control">
                         <?= form_open(); ?>
                             <div class="checkbox">
-                                <input type="checkbox" id="otpVerification" name="otpVerification" value="true" >
+                                <input type="checkbox" id="otpVerification" name="otpVerification" value="true" <?= $otp_enable ?> >
                                 <label for="otpVerification"> Enable OTP verification on login</label>
                             </div>
                             <input type="submit" value="Save" class="pink-btn">    

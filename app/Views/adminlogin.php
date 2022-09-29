@@ -28,6 +28,12 @@ $session = \Config\Services::session();
                         echo ' </div>';
                     }
 
+                    if( isset($_SESSION['success'])) {
+                        echo ' <div class="">';
+                        echo '<p>'. $_SESSION['success'] .'</p>';
+                        echo ' </div>';
+                    }
+
                     ?>
 
                 <?= form_open(); ?>
@@ -51,7 +57,7 @@ $session = \Config\Services::session();
 
                 <div class="link">
 
-                    <a href="#">forgot password?</a>
+                    <a href="<?= base_url()?>/forgot-password-confirm">forgot password?</a>
                 </div>
 
 

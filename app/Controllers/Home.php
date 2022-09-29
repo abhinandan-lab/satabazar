@@ -32,6 +32,7 @@ class Home extends BaseController
             'password' => 'required',
         ];
 
+        // post request
         if (! $this->validate($rules)) {
             return view('adminlogin', [
                 'validation' => $this->validator, 
@@ -61,45 +62,55 @@ class Home extends BaseController
                     
                     if($user['two_step_auth'] == 'true') {
                         // verify otp
-                        echo 'hello';
-                        return 'hello';
-
                         $subject = 'OTP for admin login';
                         $message = 'test message';
 
-                        if (strtolower($this->request->getMethod()) !== 'post') {
-                            // get request | send email
+                        $to = $user['email'];
+                        $emailService->setFrom('oldghantabazar@gmail.com', 'OTP login request');
+                        $emailService->setTo($to);
 
-                            // create admin with default email and password
-                            $to = $user['email'];
-                            $email->setFrom('oldghantabazar@gmail.com', 'OTP login request');
-                            $email->setTo($to);
+                        $generatedOtp = randomNumber();
+                        $otpHash = password_hash($generatedOtp, PASSWORD_DEFAULT);
 
-                            $generatedOtp = randomNumber();
-                            $otpHash = password_hash($generatedOtp, PASSWORD_DEFAULT);
+                        $userModel->update($user['id'], ['verify_otp'=> $otpHash]);
+                        $emailService->setSubject($subject);
+                        // Using a custom template
+                        $heading = 'Requested OTP for admin login';
+                        $para = 'Use this otp to login ! have a nice day :)';
+                        $template = view("changePasswordEmailTemplate", ['email'=>$to, 'otp'=> $generatedOtp, 'heading'=> $heading, 'para'=>$para]);
+                        $emailService->setMessage($template);
+                        if ($emailService->send()) 
+                        {
+                           // get otp view
 
-                            $admin->update($adminrow['id'], ['verify_otp'=> $otpHash]);
-                            $email->setSubject($subject);
-                            // Using a custom template
-                            $template = view("changePasswordEmailTemplate", ['email'=>$to, 'otp'=> $generatedOtp, 'otphash'=> $otpHash ]);
-                            $email->setMessage($template);
-                            if ($email->send()) 
-                            {
-                                // echo 'Email successfully sent';
-                                // get otp view
+                            $msg = 'Enter OTP to login';
+                            $pinkhead = 'Admin Login';
+                            $session->setFlashdata('success', 'Email sent successfully');
 
-                                $session->setFlashdata('success', 'Email sent successfully');
-                                return view('getOtpPassword', ['email'=> $adminrow['email']]);
-                            } 
-                            else 
-                            {
-                                // $data = $email->printDebugger(['headers']);
-                                // print_r($data);
-                                // adminsetting view with error flash
+                            $mydata = [
+                                'email' => $user['email'],
+                                'msg' => $msg,
+                                'pinkhead' =>$pinkhead,
+                                'redirectTo' => 'verify-login-otp',
+                            ];
+                            return view('getOtpPassword',['mydata'=> $mydata ] );
 
-                                $session->setFlashdata('success', 'something went! Email not sent');
-                                return redirect()->to('/adminsettings'); 
-                            }
+                            // exit
+
+                            // $ses_data = [
+                            //     'id' => $user['id'],
+                            //     'email' => $user['email'],
+                            //     'admin' => TRUE
+                            // ];
+                            // $session->set($ses_data);
+                            // return redirect()->to('/admin');
+                        } 
+                        else 
+                        {
+                            // $data = $email->printDebugger(['headers']);
+                            // print_r($data); email not sent
+                            $session->setFlashdata('success', 'something went wrong! Email not sent');
+                            return redirect()->to('/admin'); 
                         }
 
                     }
@@ -113,13 +124,13 @@ class Home extends BaseController
                         return redirect()->to('/admin');
                     }
 
-                    $ses_data = [
-                        'id' => $user['id'],
-                        'email' => $user['email'],
-                        'admin' => TRUE
-                    ];
-                    $session->set($ses_data);
-                    return redirect()->to('/admin');
+                    // $ses_data = [
+                    //     'id' => $user['id'],
+                    //     'email' => $user['email'],
+                    //     'admin' => TRUE
+                    // ];
+                    // $session->set($ses_data);
+                    // return redirect()->to('/admin');
                 }
 
                 else {
@@ -408,6 +419,53 @@ class Home extends BaseController
 
     }
 
+    public function adminVerifyOtpLogin() {
+
+        $request = \Config\Services::request();
+        $session = \Config\Services::session();
+        $userEmail = $this->request->getVar('email');
+
+        $admin = new AdminModel();
+        $user = $admin->where( 'email', $userEmail)->first();
+
+        $rules = [
+            'otp' => 'required|integer|min_length[6]|max_length[6]',
+        ];
+
+        $msg = 'Enter OTP to login';
+        $pinkhead = 'Admin Login';
+        $mydata = [
+            'email' => $userEmail,
+            'msg' => $msg,
+            'pinkhead' =>$pinkhead,
+            'redirectTo' => 'verify-login-otp',
+        ];
+
+        // post request
+        if (! $this->validate($rules)) {
+            return view('getOtpPassword', ['validation' => $this->validator, 'mydata' => $mydata ]);
+        }
+
+        $otpByuser = (int)$this->request->getVar('otp');
+
+        if(password_verify($otpByuser, $user['verify_otp'])) {
+            // otp match done login
+            $ses_data = [
+                'id' => $user['id'],
+                'email' => $user['email'],
+                'admin' => TRUE
+            ];
+            $session->set($ses_data);
+            return redirect()->to('/admin');
+           
+        }
+        else {
+            // wrong otp
+            $session->setFlashdata('success', 'You entered wrong OTP');
+            return view('getOtpPassword', ['validation' => $this->validator, 'mydata'=> $mydata ]);
+        }
+    }
+
     public function adminChangePassword() {
 
         // return view('changePasswordEmailTemplate');
@@ -432,9 +490,7 @@ class Home extends BaseController
 
         if (strtolower($this->request->getMethod()) !== 'post') {
             // get request | send email
-
             // create admin with default email and password
-
 
             $to = $adminrow['email'];
             $email->setFrom('oldghantabazar@gmail.com', 'Change Admin Password');
@@ -446,15 +502,28 @@ class Home extends BaseController
             $admin->update($adminrow['id'], ['verify_otp'=> $otpHash]);
             $email->setSubject($subject);
             // Using a custom template
-            $template = view("changePasswordEmailTemplate", ['email'=>$to, 'otp'=> $generatedOtp, 'otphash'=> $otpHash ]);
+
+            $heading = ' Change password verification';
+            $para = 'Enter this obove OTP to validate your email';
+            $template = view("changePasswordEmailTemplate", ['email'=>$to, 'otp'=> $generatedOtp, 'heading'=> $heading, 'para'=>$para]);
             $email->setMessage($template);
             if ($email->send()) 
             {
                 // echo 'Email successfully sent';
                 // get otp view
 
+                $msg = 'Enter OTP to change password';
+                $pinkhead = 'Change Password';
+
+                $mydata = [
+                    'email' => $adminrow['email'],
+                    'msg' => $msg,
+                    'pinkhead' =>$pinkhead,
+                    'redirectTo' => '',
+                ];
+
                 $session->setFlashdata('success', 'Email sent successfully');
-                return view('getOtpPassword', ['email'=> $adminrow['email']]);
+                return view('getOtpPassword', ['mydata'=> $mydata]);
             } 
             else 
             {
@@ -474,9 +543,11 @@ class Home extends BaseController
 
         // post request
         if (! $this->validate($rules)) {
-            return view('getOtpPassword', [
-                'validation' => $this->validator, 'email'=> $adminrow['email']
-            ]);
+
+            $mydata = [
+                'email'=> $adminrow['email'],
+            ];
+            return view('getOtpPassword', [ 'validation' => $this->validator, $mydata]);
         }
         // verify otp and change admin data
 
@@ -489,8 +560,11 @@ class Home extends BaseController
         else {
             // wrong otp
             $session->setFlashdata('success', 'You entered wrong OTP');
+            $mydata = [
+                'email'=> $adminrow['email'],
+            ];
             return view('getOtpPassword', [
-                'validation' => null, 'email'=> $adminrow['email'],
+                'validation' => null, $mydata,
             ]);
         }
     }
@@ -504,10 +578,16 @@ class Home extends BaseController
             'pass' => 'required|min_length[4]',
         ];
 
+        // return 'comes here';
         if (! $this->validate($rules)) {
-            return view('getOtpPassword', [
-                'validation' => $this->validator, 'email'=> $adminrow['email']
-            ]);
+
+            $mydata = [
+                'email' => $adminrow['email'],
+                'msg' => $msg,
+                'pinkhead' =>$pinkhead,
+                'redirectTo' => '',
+            ];
+            return view('getOtpPassword', ['validation' => $this->validator, $mydata ]);
         }
 
         // update db
@@ -530,7 +610,7 @@ class Home extends BaseController
         ];
         $session->set($ses_data);
         $session->setFlashdata('success', 'Password updated successfully! login again');
-        return redirect()->to('/admin');
+        return redirect()->to('/adminlogin');
 
 
 
@@ -564,6 +644,69 @@ class Home extends BaseController
             return redirect()->to('/admin'); 
         }
         return redirect()->to('/admin');
+    }
+
+    public function adminForgotPasswordConfirm() {
+        
+        return view('forgotPasswordConfirmation');
+    }
+
+    public function adminForgotAdminPass() {
+
+        // send otp forgot password
+        // change password
+        //login
+
+        $session = \Config\Services::session();
+        $request = \Config\Services::request();
+
+        
+        $admin = new AdminModel();
+        $data = $admin->findall();
+
+        $subject = 'Requested to Change Admin Password';
+        $message = 'test message';
+        $adminrow = $data[0];
+
+        $msg = 'Enter OTP to change password';
+        $pinkhead = 'Change Password';
+
+        $rules = [
+            'otp' => 'required|integer|min_length[6]|max_length[6]',
+        ];
+
+        // post request
+        if (! $this->validate($rules)) {
+            $mydata = [
+                'email' => $adminrow['email'],
+                'msg' => $msg,
+                'pinkhead' =>$pinkhead,
+                'redirectTo' => '',
+            ];
+            return view('getOtpPassword', [ 'validation' => $this->validator, 'mydata'=> $mydata]);
+        }
+        // verify otp and change admin data
+
+        $otpByuser = (int)$this->request->getVar('otp');
+
+        if(password_verify($otpByuser, $adminrow['verify_otp'])) {
+            // otp match
+            return view('adminGetnewPassword', ['email'=>$adminrow['email']]);
+        }
+        else {
+            // wrong otp
+            $session->setFlashdata('success', 'You entered wrong OTP');
+            $mydata = [
+                'email' => $adminrow['email'],
+                'msg' => $msg,
+                'pinkhead' =>$pinkhead,
+                'redirectTo' => '',
+            ];
+            return view('getOtpPassword', ['validation' => null, 'mydata'=> $mydata,]);
+        }
+
+
+
     }
 
 

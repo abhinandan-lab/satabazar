@@ -4,7 +4,7 @@
 
 
 <div class="settings">
-    <h1 class="pink-head italic">Change Password</h1>
+    <h1 class="pink-head italic"><?= $mydata['pinkhead'] ?></h1>
 
     <div class="info">
 
@@ -23,14 +23,14 @@
 
             <?= $validation->listErrors() ?>
 
-            <p>OTP has been sent to your email account <span><?= $email ?></span>. Enter OTP to change
-                password </p>
+            <br>
+            <p>OTP has been sent to your email account <span><?= $mydata['email'] ?></span>. <?= $mydata['msg']?> </p>
 
             <div class="form-control">
-                <?= form_open(); ?>
+                <?= form_open($mydata['redirectTo']); ?>
                 <div class="input-text">
                     <input type="text" name="otp" placeholder="Enter OTP here">
-                    <input type="hidden" name="email" value="<?= $email ?>">
+                    <input type="hidden" name="email" value="<?= $mydata['email'] ?>">
                 </div>
                 <input type="submit" value="Submit" class="pink-btn">
                 <?= form_close(); ?>

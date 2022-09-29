@@ -1,0 +1,278 @@
+CRITICAL - 2022-09-29 09:51:18 --> Undefined variable $admin
+in APPPATH\Controllers\Home.php on line 75.
+ 1 APPPATH\Controllers\Home.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Controllers\\Home.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 09:52:28 --> Call to a member function send() on string
+in APPPATH\Controllers\Home.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:03:28 --> view(): Argument #1 ($name) must be of type string, array given, called in C:\xampp\htdocs\satabazar\app\Controllers\Home.php on line 95
+in SYSTEMPATH\Common.php on line 1128.
+ 1 APPPATH\Controllers\Home.php(95): view([...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:04:13 --> view(): Argument #1 ($name) must be of type string, array given, called in C:\xampp\htdocs\satabazar\app\Controllers\Home.php on line 95
+in SYSTEMPATH\Common.php on line 1128.
+ 1 APPPATH\Controllers\Home.php(95): view([...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:07:40 --> view(): Argument #1 ($name) must be of type string, array given, called in C:\xampp\htdocs\satabazar\app\Controllers\Home.php on line 95
+in SYSTEMPATH\Common.php on line 1128.
+ 1 APPPATH\Controllers\Home.php(95): view([...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:12:11 --> view(): Argument #1 ($name) must be of type string, array given, called in C:\xampp\htdocs\satabazar\app\Controllers\Home.php on line 95
+in SYSTEMPATH\Common.php on line 1128.
+ 1 APPPATH\Controllers\Home.php(95): view([...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:14:04 --> view(): Argument #1 ($name) must be of type string, array given, called in C:\xampp\htdocs\satabazar\app\Controllers\Home.php on line 96
+in SYSTEMPATH\Common.php on line 1128.
+ 1 APPPATH\Controllers\Home.php(96): view([...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:14:34 --> view(): Argument #1 ($name) must be of type string, array given, called in C:\xampp\htdocs\satabazar\app\Controllers\Home.php on line 96
+in SYSTEMPATH\Common.php on line 1128.
+ 1 APPPATH\Controllers\Home.php(96): view([...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:16:47 --> view(): Argument #1 ($name) must be of type string, array given, called in C:\xampp\htdocs\satabazar\app\Controllers\Home.php on line 96
+in SYSTEMPATH\Common.php on line 1128.
+ 1 APPPATH\Controllers\Home.php(96): view([...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:17:23 --> Undefined variable $mydata
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mydata', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(96): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:29:32 --> Undefined variable $adminrow
+in APPPATH\Controllers\Home.php on line 438.
+ 1 APPPATH\Controllers\Home.php(438): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $adminrow', 'APPPATH\\Controllers\\Home.php', 438)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminVerifyOtpLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:41:46 --> Cannot use object of type App\Models\AdminModel as array
+in APPPATH\Controllers\Home.php on line 455.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminVerifyOtpLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:42:43 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 455.
+ 1 APPPATH\Controllers\Home.php(455): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Home.php', 455)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminVerifyOtpLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:44:17 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 455.
+ 1 APPPATH\Controllers\Home.php(455): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Home.php', 455)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminVerifyOtpLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:48:01 --> Undefined variable $mydata
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mydata', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(447): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminVerifyOtpLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:51:22 --> Undefined variable $mydata
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mydata', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(447): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminVerifyOtpLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:52:17 --> Undefined variable $userEmail
+in APPPATH\Controllers\Home.php on line 430.
+ 1 APPPATH\Controllers\Home.php(430): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userEmail', 'APPPATH\\Controllers\\Home.php', 430)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminVerifyOtpLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:53:35 --> Undefined variable $userEmail
+in APPPATH\Controllers\Home.php on line 430.
+ 1 APPPATH\Controllers\Home.php(430): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userEmail', 'APPPATH\\Controllers\\Home.php', 430)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminVerifyOtpLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 13:54:18 --> Undefined variable $mydata
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mydata', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(448): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminVerifyOtpLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 14:09:36 --> Undefined variable $mydata
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mydata', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(468): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminVerifyOtpLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 14:34:38 --> Undefined variable $mydata
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mydata', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(528): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminChangePassword()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 14:43:31 --> Undefined variable $adminrow
+in APPPATH\Controllers\Home.php on line 663.
+ 1 APPPATH\Controllers\Home.php(663): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $adminrow', 'APPPATH\\Controllers\\Home.php', 663)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminForgotAdminPass()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 14:45:33 --> Undefined variable $mydata
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mydata', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(673): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminForgotAdminPass()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 14:46:50 --> Undefined variable $mydata
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mydata', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(673): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminForgotAdminPass()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 14:46:53 --> Undefined variable $mydata
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mydata', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(673): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminForgotAdminPass()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 14:47:12 --> Undefined variable $mydata
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mydata', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(673): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminForgotAdminPass()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 14:47:20 --> Undefined variable $mydata
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mydata', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(673): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminForgotAdminPass()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 14:47:56 --> Undefined array key "pinkhead"
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pinkhead"', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(673): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminForgotAdminPass()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 14:48:50 --> Undefined variable $session
+in APPPATH\Controllers\Home.php on line 691.
+ 1 APPPATH\Controllers\Home.php(691): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Controllers\\Home.php', 691)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminForgotAdminPass()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 14:49:13 --> Undefined array key "pinkhead"
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pinkhead"', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(698): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminForgotAdminPass()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 14:49:17 --> Undefined array key "pinkhead"
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pinkhead"', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(698): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminForgotAdminPass()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-29 14:49:33 --> Undefined variable $msg
+in APPPATH\Controllers\Home.php on line 697.
+ 1 APPPATH\Controllers\Home.php(697): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $msg', 'APPPATH\\Controllers\\Home.php', 697)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminForgotAdminPass()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
