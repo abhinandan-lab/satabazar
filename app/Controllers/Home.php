@@ -14,9 +14,12 @@ class Home extends BaseController
     public function index()
     {
         $sattamodel = new SattaModel();
-        $data['list'] = $sattamodel->findAll();
+        $data = $sattamodel->findAll();
+        $viewData = [
+            'title' => 'Home | show lists',
+        ];
 
-        return view('home', $data);
+        return view('home', ['list'=> $data, 'viewdata'=> $viewData]);
     }
 
     public function adminLogin() {
@@ -351,16 +354,20 @@ class Home extends BaseController
             $sataPanelModel = new SattaPanelModel();
             $sataRowModel = new SattaModel();
             $sataRow = $sataRowModel->find($id);
-            
             $rowsPanel = $sataPanelModel->where('satta_id', $id)->orderBy('created_at', 'asc')->findAll();
+
+            $viewData = [
+                'title' => $sataRow['name']. ' panel chart',
+            ];
+            
             // $rowsPanel = $sataPanelModel->where(['satta_id' => $id, 'id' => 3])->orderBy('created_at', 'asc')->findAll();
 
             // echo '<pre>';
             // print_r($rowsPanel);
-            return view('satta_panel', ['rows' => $rowsPanel, 'satta' => $sataRow]);
+            return view('satta_panel', ['rows' => $rowsPanel, 'satta' => $sataRow, 'viewdata'=> $viewData]);
         }
 
-        return view('satta_panel', ['rows' => $rowsPanel, 'satta' => $sataRow]);
+        return view('satta_panel', ['rows' => $rowsPanel, 'satta' => $sataRow, 'viewdata'=> null]);
 
     }
 
@@ -374,9 +381,14 @@ class Home extends BaseController
             
             $rowsPanel = $sataPanelModel->where('satta_id', $id)->orderBy('created_at', 'asc')->findAll();
             // echo 'praise the LORD';
-            return view('satta_jodi', ['rows' => $rowsPanel, 'satta' => $sataRow]);
+
+            $viewData = [
+                'title' => $sataRow['name']. ' jodi chart',
+            ];
+
+            return view('satta_jodi', ['rows' => $rowsPanel, 'satta' => $sataRow, 'viewdata'=> $viewData]);
         }
-        return view('satta_jodi', ['rows' => null, 'satta' => $sataRow]);
+        return view('satta_jodi', ['rows' => null, 'satta' => $sataRow, 'viewdata'=> null]);
     }
 
     public function adminSettings() {
@@ -479,8 +491,8 @@ class Home extends BaseController
 
         if(count($data) == 0) { 
             $url = base_url().'/setAdminDefaults';
-            $session->setFlashdata('success', 'There is no admin, <a href="'.$url.'">click here to create</a>');
-            return redirect()->to('/admin');
+            $session->setFlashdata('error', 'There is no admin, <a href="'.$url.'">click here to create</a>');
+            return redirect()->to('/adminlogin');
         }
         
 
@@ -625,6 +637,7 @@ class Home extends BaseController
 
     public function setdefaultAdminCredentials() {
 
+        $session = \Config\Services::session();
         $admin = new AdminModel();
         $data = $admin->findall();
 

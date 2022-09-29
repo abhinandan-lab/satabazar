@@ -28,7 +28,7 @@
             <?php foreach($list as $row) {  ?>
 
             <div class="item admin">
-                <a class="blue-btn" href="<?= base_url() ?>/ jodi/ <?= $row['id'] ?>" targer="_blank">Jodi</a>
+                <a class="blue-btn" href="<?=base_url();?>/satta-jodi/<?= $row['id']?>" target="_blank">Jodi</a>
                 <div class="info">
 
                     <h3><?=  $row['name'] ?></h3>
