@@ -567,7 +567,7 @@ class Home extends BaseController
 
         if(password_verify($otpByuser, $adminrow['verify_otp'])) {
             // otp match
-            return view('adminGetnewPassword', ['email'=>$adminrow['email']]);
+            return view('adminGetNewPassword', ['email'=>$adminrow['email']]);
         }
         else {
             // wrong otp
@@ -633,6 +633,8 @@ class Home extends BaseController
         $session = \Config\Services::session();
         $session->setFlashdata('success', 'Change email is not implemeted yet! Comging soon');
         return redirect()->to('/admin');
+
+        // send otp => verify otp get new email and password => verfiy both => send to login agin
     }
 
     public function setdefaultAdminCredentials() {
@@ -704,7 +706,7 @@ class Home extends BaseController
 
         if(password_verify($otpByuser, $adminrow['verify_otp'])) {
             // otp match
-            return view('adminGetnewPassword', ['email'=>$adminrow['email']]);
+            return view('adminGetNewPassword', ['email'=>$adminrow['email']]);
         }
         else {
             // wrong otp
