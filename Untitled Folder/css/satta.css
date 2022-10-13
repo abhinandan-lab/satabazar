@@ -27,7 +27,7 @@ body {
 
 .logo {
   text-align: center;
-  font-size: 3em;
+  font-size: 2.4em;
   padding: 0.4em;
   border: 3px solid #ff0016;
   border-radius: 15px;
@@ -523,7 +523,7 @@ body {
     margin: 4px;
   }
   .logo {
-    font-size: 2.4em;
+    font-size: 1.8em;
     padding: 0.2em;
   }
   .pink-head {

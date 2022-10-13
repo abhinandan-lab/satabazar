@@ -1,0 +1,22 @@
+CRITICAL - 2022-10-04 19:33:37 --> Undefined variable $mydata
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mydata', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(706): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminChangeEmail()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 19:36:01 --> Undefined array key "pinkhead"
+in APPPATH\Views\getOtpPassword.php on line 7.
+ 1 APPPATH\Views\getOtpPassword.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pinkhead"', 'APPPATH\\Views\\getOtpPassword.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\getOtpPassword.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('getOtpPassword', [], true)
+ 5 APPPATH\Controllers\Home.php(706): view('getOtpPassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->adminChangeEmail()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

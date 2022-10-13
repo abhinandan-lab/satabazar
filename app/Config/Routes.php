@@ -78,6 +78,9 @@ $routes->group('', ['filter'=> 'isAdminLoggedin'], function($routes){
     $routes->post('admin-change-password', 'Home::adminChangePassword');
 
     $routes->get('admin-change-email', 'Home::adminChangeEmail');
+    $routes->post('admin-change-email', 'Home::adminChangeEmail');
+    
+    $routes->get('adminlogout', 'Home::adminLogout');
 
     $routes->post('admin-verify', 'Home::adminVerifyOtp');
     

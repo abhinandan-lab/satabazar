@@ -22,7 +22,8 @@
 
             <div class="action">
                 <a class="pink-btn" href="<?= base_url();?>/create">Create satta</a> &nbsp;
-                <a class="pink-btn" href="<?= base_url();?>/adminsettings">Settings</a>
+                <a class="pink-btn" href="<?= base_url();?>/adminsettings">Settings</a> &nbsp; &nbsp;
+                <a class="red-btn" href="<?= base_url();?>/adminlogout"> &nbsp;Log out &nbsp;</a> 
             </div>
 
             <?php foreach($list as $row) {  ?>

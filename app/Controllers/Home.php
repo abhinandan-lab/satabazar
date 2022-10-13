@@ -630,11 +630,105 @@ class Home extends BaseController
 
     public function adminChangeEmail() {
 
+        $email = \Config\Services::email();
         $session = \Config\Services::session();
-        $session->setFlashdata('success', 'Change email is not implemeted yet! Comging soon');
-        return redirect()->to('/admin');
+        $request = \Config\Services::request();
+
+        $admin = new AdminModel();
+        $subject = 'Requested to Change Admin Email';
+        $message = 'test message';
+
+        $data = $admin->findall();
+        $adminrow = $data[0];
+
+        // $session->setFlashdata('success', 'Change email is not implemeted yet! Comging soon');
+        // return redirect()->to('/admin');
 
         // send otp => verify otp get new email and password => verfiy both => send to login agin
+
+        if (strtolower($this->request->getMethod()) !== 'post') {
+            // get request | send email
+
+            $to = $adminrow['email'];
+            $email->setFrom('oldghantabazar@gmail.com', 'Change Admin Email');
+            $email->setTo($to);
+
+            $generatedOtp = randomNumber();
+            $otpHash = password_hash($generatedOtp, PASSWORD_DEFAULT);
+
+            $admin->update($adminrow['id'], ['verify_otp'=> $otpHash]);
+            $email->setSubject($subject);
+            // Using a custom template
+
+            $heading = ' Change Email verification';
+            $para = 'Enter this obove OTP to validate your current email';
+            $template = view("changePasswordEmailTemplate", ['email'=>$to, 'otp'=> $generatedOtp, 'heading'=> $heading, 'para'=>$para]);
+            $email->setMessage($template);
+            if ($email->send()) 
+            {
+                // echo 'Email successfully sent';
+                // get otp view
+
+                $msg = 'Enter OTP to change Email';
+                $pinkhead = 'Change Email';
+
+                $mydata = [
+                    'email' => $adminrow['email'],
+                    'msg' => $msg,
+                    'pinkhead' =>$pinkhead,
+                    'redirectTo' => 'admin-change-email',
+                ];
+
+                $session->setFlashdata('success', 'Email sent successfully');
+                return view('getOtpPassword', ['mydata'=> $mydata]);
+            } 
+            else 
+            {
+                // $data = $email->printDebugger(['headers']);
+                // print_r($data);
+                // adminsetting view with error flash
+
+                $session->setFlashdata('success', 'something went! Email not sent');
+                return redirect()->to('/adminsettings'); 
+            }
+        }
+
+        $rules = [
+            'otp' => 'required|integer|min_length[6]|max_length[6]',
+        ];
+
+        // post request
+        if (! $this->validate($rules)) {
+
+            $msg = 'Enter OTP to change Email';
+            $pinkhead = 'Change Email';
+
+            $mydata = [
+                'email' => $adminrow['email'],
+                'msg' =>' $msg',
+                'pinkhead' =>'$pinkhead',
+                'redirectTo' => '',
+            ];
+            return view('getOtpPassword', [ 'validation' => $this->validator, 'mydata'=> $mydata]);
+        }
+        // verify otp and change admin data
+
+        $otpByuser = (int)$this->request->getVar('otp');
+
+        if(password_verify($otpByuser, $adminrow['verify_otp'])) {
+            // otp match
+            return view('adminGetNewEmail', ['email'=> $adminrow['email']]);
+        }
+        else {
+            // wrong otp
+            $session->setFlashdata('success', 'You entered wrong OTP');
+            $mydata = [
+                'email'=> $adminrow['email'],
+            ];
+            return view('getOtpPassword', [
+                'validation' => null, $mydata,
+            ]);
+        }
     }
 
     public function setdefaultAdminCredentials() {
@@ -722,6 +816,21 @@ class Home extends BaseController
 
 
 
+    }
+
+    public function adminLogout() {
+
+        $session = \Config\Services::session();
+
+        $ses_data = [
+            'id',
+            'email',
+            'admin'
+        ];
+
+        $session->setFlashdata('success', 'Logout success');
+        $session->remove($ses_data);
+        return redirect()->to('/adminlogin');
     }
 
 
